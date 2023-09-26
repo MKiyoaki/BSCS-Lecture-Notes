@@ -1,1 +1,2 @@
-# Lecture notes for 2nd year
+# BSCS@KCL Lecture Notes 
+#### by MKiyoaki

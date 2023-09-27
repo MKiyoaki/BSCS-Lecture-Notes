@@ -28,7 +28,7 @@ Semester 2
 > - Anonymous questionnaire via Team Feedback
 
 ### Quick start
-[WEEK1](5ccs2fc2/w1.md)
+[WEEK1](year2/5ccs2seg/w1.md)
 
 WEEK2
 

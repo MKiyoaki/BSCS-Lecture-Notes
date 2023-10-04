@@ -28,9 +28,9 @@ Semester 2
 > - Anonymous questionnaire via Team Feedback
 
 ### Quick start
-[WEEK1](year2/5ccs2seg/w1.md)
+[WEEK1 - Git and Python](year2/5ccs2seg/w1.md)
 
-WEEK2
+WEEK2 - Django
 
 WEEK3
 

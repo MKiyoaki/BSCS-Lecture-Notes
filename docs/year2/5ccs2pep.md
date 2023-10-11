@@ -22,7 +22,7 @@ WEEK5 - Coursework 1
 
 READING WEEK
 
-WEEK6 -
+WEEK6 - 
 
 WEEK7 -
 

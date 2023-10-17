@@ -14,9 +14,9 @@
 
 [WEEK3 - The Cook - Levin Theorem / Divide-and-Conquer](year2/5ccs2fc2/w3.md)
 
-WEEK4 - Graph Algorithm
+[WEEK4 - Graph Algorithm](year2/5ccs2fc2/w4.md)
 
-WEEK5 - SAT Solving
+[WEEK5 - SAT Solving](year2/5ccs2fc2/w5.md)
 
 READING WEEK
 
@@ -26,8 +26,8 @@ WEEK7 - Linear Programming
 
 WEEK8 - Probabilistic Algorithms
 
-WEEK9 - 
+WEEK9 - The Limits of Computation I
 
-WEEK10
+WEEK10 - The Limits of Computation II
 
 REVISION

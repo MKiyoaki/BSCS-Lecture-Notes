@@ -32,11 +32,11 @@ Semester 2
 
 WEEK2 - Django
 
-WEEK3
+WEEK3 - Django
 
-WEEK4
+WEEK4 - Django
 
-WEEK5
+WEEK5 - Team allocation (Note: 19th Oct ddl for registeration)
 
 READING WEEK
 

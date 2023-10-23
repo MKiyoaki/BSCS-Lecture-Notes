@@ -1,4 +1,6 @@
 # [5CCS2SEG Software Engineering Group Project](https://keats.kcl.ac.uk/course/view.php?id=109900)
+[🏠 HOME](README.md)
+
 ### Assessment 
 
 Semester 1
@@ -30,13 +32,7 @@ Semester 2
 ### Quick start
 [WEEK1 - Git and Python](year2/5ccs2seg/w1.md)
 
-WEEK2 - Django
-
-WEEK3 - Django
-
-WEEK4 - Django
-
-WEEK5 - Team allocation (Note: 19th Oct ddl for registeration)
+[WEEK2 ~ 5 - Django](year2/5ccs2seg/w2_5.md)
 
 READING WEEK
 

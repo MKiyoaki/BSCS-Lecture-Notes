@@ -21,14 +21,14 @@
 
 READING WEEK
 
-WEEK6 - Approximation and the Travelling Salesman
+[WEEK6 - Approximation and the Travelling Salesman Problem](year2/5ccs2fc2/w6.md)
 
-WEEK7 - Linear Programming
+[WEEK7 - Linear Programming](year2/5ccs2fc2/w7.md)
 
-WEEK8 - Probabilistic Algorithms
+[WEEK8 - Probabilistic Algorithms](year2/5ccs2fc2/w8.md)
 
-WEEK9 - The Limits of Computation I
+[WEEK9 - The Limits of Computation I](year2/5ccs2fc2/w9.md)
 
-WEEK10 - The Limits of Computation II
+[WEEK10 - The Limits of Computation II](year2/5ccs2fc2/w10.md)
 
 REVISION

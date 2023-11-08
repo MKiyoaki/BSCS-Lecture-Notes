@@ -26,14 +26,14 @@
 
 READING WEEK
 
-WEEK6 - 
+[WEEK6 - Markup Languages](year2/5ccs2ins/w6.md)
 
-WEEK7 - 
+[WEEK7 - ](year2/5ccs2ins/w7.md)
 
-WEEK8 - 
+[WEEK8 - ](year2/5ccs2ins/w8.md)
 
-WEEK9 - 
+[WEEK9 - ](year2/5ccs2ins/w9.md)
 
-WEEK10 - 
+[WEEK10 - ](year2/5ccs2ins/w10.md)
 
 REVISION

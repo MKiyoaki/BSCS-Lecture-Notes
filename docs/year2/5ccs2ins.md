@@ -28,9 +28,9 @@ READING WEEK
 
 [WEEK6 - Markup Languages](year2/5ccs2ins/w6.md)
 
-[WEEK7 - ](year2/5ccs2ins/w7.md)
+[WEEK7 - Client-side Interaction with Services](year2/5ccs2ins/w7.md)
 
-[WEEK8 - ](year2/5ccs2ins/w8.md)
+[WEEK8 - Web Services](year2/5ccs2ins/w8.md)
 
 [WEEK9 - ](year2/5ccs2ins/w9.md)
 

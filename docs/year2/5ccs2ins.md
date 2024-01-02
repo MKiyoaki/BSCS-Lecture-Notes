@@ -32,8 +32,8 @@ READING WEEK
 
 [WEEK8 - Web Services](year2/5ccs2ins/w8.md)
 
-[WEEK9 - ](year2/5ccs2ins/w9.md)
+[WEEK9 - Semantic Web](year2/5ccs2ins/w9.md)
 
-[WEEK10 - ](year2/5ccs2ins/w10.md)
+[WEEK10 - Linked (Open) Data](year2/5ccs2ins/w10.md)
 
 REVISION

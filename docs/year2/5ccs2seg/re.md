@@ -398,7 +398,12 @@
 
 - Role in the project
   - 2nd phase of management lifecycle
-  - Determine steps to achieve project goals, establish budgets, timelines, milestones, source necessary materials
+  - Determine 
+    - steps to achieve project goals, 
+    - establish budgets, 
+    - timelines, 
+    - milestones, 
+    - source necessary materials
 - Project planning vs. other stages
   - Decompose a large project into smaller tasks, build your team, prepare a schedule for task completion
 
@@ -465,7 +470,7 @@
   - who has **authority**,
   - **scheduling tasks** chronologically
 
-###### 9.2.
+###### 9.2. 
 
 
 

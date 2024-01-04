@@ -467,27 +467,99 @@
   - who has **authority**,
   - **scheduling tasks** chronologically
 
-###### 9.2. 
+###### 9.2. Techiniques
 
-
-
-
+- Measuring time and effort 
+- Task dependencies and their effect
+  - **Interrelations** that exist between project activities
+  - Determine the **order** in which tasks must be executed
+  - Need to **work around them** to ensure successful completion
+  - Types of dependencies
+    - finish to start (Task B cannot start until Task A is completely finished) , 
+    - finish to finish (Task B cannot finish until Task A is finished), 
+    - start to start (Task B cannot start until Task A has started), 
+    - start to finish (Task B cannot finish until Task A has started)
+- Gantt chart - Horizontal bar chart
+  - Used to illustrate the timeline of a project
+  - Gather information about all tasks and processes, 
+  - evaluate dependency and relationships between different phases & tasks, 
+  - create a timeline, 
+  - list each task on the left side, 
+  - arrange bars for each task within the timeline
 
 ---
 
 #### 10. Communcation planning
 
+###### 10.1. Communcation planning
 
+- Reasons
+  - Establish significant relationships between a business and its key audiences
+  - Can think more closely about how consumers/stakeholders may perceive messages
+- Techniques
+  - Establish communication methods, align on cadence
+
+###### 10.2. Types of communcation
+
+- Email, 
+- video calls,
+- phone calls, 
+- Slack, 
+- face-to-face conversations
 
 ---
 
 #### 11. Agile + lean development
+
+###### 11.1. Agile
+
+- Definition
+  - Values flexibility, collaboration, customer satisfaction
+- Features
+  - Satisfy the customer through early and continuous delivery of valuable software, 
+  - welcome changing requirements, 
+  - promote sustainable development
+
+###### 11.2. Lean
+
+- Definition
+  - Eliminate waste
+- Features
+  - Specify value from the standpoint of the end customer, 
+  - identify all steps required to achieve, 
+  - make the steps occur in tight sequence, 
+  - let customers pull value from the next upstream activity, 
+  - strive for perfection
+
+###### 11.3. Techniques
+
+- User stories
+  - Development tasks expressed as ‘person + need + purpose’
+  - I.N.V.E.S.T. criteria - Guide to write meaningful user stories
+    - Independent, Negotiable, Valuable, Estimable, Small, and Testable
+  - 
 
 
 
 ---
 
 #### 12. Project execution
+
+###### 12.1. Definition
+
+- Phase - 3rd phase of lifecycle, usually the longest and most demanding
+- Project execution vs. other stages
+  - Coordinating resources, managing stakeholders, implementing project deliverables
+
+###### 12.2. Challenges
+
+- Ambitious goas and timelines, lack of clarity about vision or goals, lack of buy-in
+
+  and participation from key players, staff may be involved in other projects
+
+###### 12.3. Activaties
+
+
 
 
 

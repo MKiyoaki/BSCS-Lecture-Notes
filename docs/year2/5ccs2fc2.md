@@ -31,4 +31,4 @@ READING WEEK
 
 [WEEK10 - The Limits of Computation II](year2/5ccs2fc2/w10.md)
 
-[REVISION]((year2/5ccs2ins/re.md))
+[REVISION]((year2/5ccs2fc2/re.md))

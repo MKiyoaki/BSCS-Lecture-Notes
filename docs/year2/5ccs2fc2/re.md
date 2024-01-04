@@ -103,6 +103,12 @@
 - WEEK II
   - P and NP - note that P belongs to NP
   - Satisfiable
+  - Computable - terminating in polynomial time
+  - Polynomial reducible
+  
+    >$X \leq_p Y \implies$
+    >
+    >there is a computable function $f: \Sigma^* \to \Sigma^*$ such that for $w \in X$ exist $f(w) \in Y$
   
 - WEEK VI
   - R-Approxiable and Unapproxiable

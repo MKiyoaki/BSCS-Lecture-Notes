@@ -58,7 +58,8 @@
 
   - Concept
 
-    <u>Changing one element affects the others</u>, demonstrating the interdependence of constraints, with a delicate balance between them
+    - <u>Changing one element affects the others</u>, demonstrating the interdependence of constraints, with a delicate balance between them
+    - The three factors affects the final quality
 
 - Diamond Model
 
@@ -268,7 +269,7 @@
 
 ---
 
-## 4. Project initiation
+#### 4. Project initiation
 
 ###### 4.1. Definition
 
@@ -289,15 +290,234 @@
 - Stakeholders - Individual, group, or organization that’s **impacted by the outcome** of a project or business venture
 - Key Stakeholders - Most crucial stakeholders, **have power to dictate project success**
 
-###### 4.3. Project Expectations and Constraints
+###### 4.3. Techniques
 
-- 
+- Project Expectations and Constraints
+  - **Expectations** - desired outcomes, goals
+  - **Constraints** - limitations, *e.g., time, cost, risk*
+  - Out of scope constraints - Not regarding scope, goals, deliverables
+- **Negotiation** - Helps secure resources, gain project visibility, prevent roadblocks
+- Four foundational behaviors
+  - Not buying story – show conviction & integrity
+  - Tone-deaf – use appropriate language when communicating with stakeholders
+  - Disowning accountability – take responsibility for defining scope, goals
+  - Isolating – be actively involved and communicate regularly
+- **Communication** - Establish clear communication, facilitates collaboration
+- Project scope statement
+  - Defines all elements of a project’s scope
+  - Including goals, requirements, description, exclusions, constraints, assumptions, deliverables
 
-###### 4.4. Brainstorm
+---
+
+#### 5. **Brainstorm**
+
+###### 5.1. Definition
+
+- `Brainstorm`
+
+  - What? - Group technique to find a solution to a problem by gathering and recording ideas in a free-flowing manner
+
+    >i.e., Think of an idea and record it
+
+  - When? - Complex problems requiring creative thinking and diverse perspectives
+
+  - How? - Define a topic & context, pick facilitator, invite range of participants, set agenda
+
+###### 5.2. Principles
+
+- Accept all ideas, 
+- Build on others’ ideas, 
+- No criticism, 
+- Quantity > Quality 
+
+###### 5.3. Key requirement
+
+- **Record ideas** - Audio recorder, take notes, photograph visual aids
+- **Post-session analysis** - Eliminate duplicates, remove nonsense, evaluate ideas, decide on usable ideas
+
+###### 5.4. Key stakeholder **D.A.N.C.E.**
+
+- Content
+  - Decision
+  - Authority
+  - Need
+  - Connections
+  - Energy
+- Applying
+  - Understand dynamic project environment, changing stakeholder needs. Be flexible & adaptable
+
+---
+
+#### 6. Interview
+
+###### 6.1. Definition
+
+- `Interview`
+  - A conversation where one person asks questions, and the other answers. 
+  - Used to verify information, discuss skills, get to know the candidate
+  - Suitable problems could be
+    - Gathering data, 
+    - analyzing a problem, 
+    - weighing pros and cons, 
+    - reaching logical decisions
+
+###### 6.2. Techinques
+
+- Conducting an interview
+
+  - Familiarize with the job description, study the candidate’s application materials,
+  - Ask relevant questions, 
+
+  - Understand that the candidate may be nervous
+
+- Conducting a group interview
+
+  - Plan the process, 
+  - Prepare interviewees, strong opening message, structured questions, 
+  - Facilitate group discussion and team projects
+
+- Overcoming conflicts
+
+  - Show your responsibility to overcome a challenge, 
+  - detail steps you took to rectify the issue, 
+  - talk about the actions you took, 
+  - explain thought process
+
+- Question funnel - **Method** of questioning
+
+  - broad, open-ended questions
+  - **gradually become more specific,** allows the conversation to flow naturally, whilst collecting more crucial information
+
+- Tracking information - Take notes, use reminders
+
+---
+
+#### 7. Project planning
+
+###### 7.1. Definition
+
+- Role in the project
+  - 2nd phase of management lifecycle
+  - Determine steps to achieve project goals, establish budgets, timelines, milestones, source necessary materials
+- Project planning vs. other stages
+  - Decompose a large project into smaller tasks, build your team, prepare a schedule for task completion
+
+###### 7.2. Activities
+
+- Define factors for success, 
+- focus on subtasks, 
+- create best and worst case scenarios, 
+- hold brainstorming sessions, 
+- ask project manager to provide project outline
+
+---
+
+#### 8. Risk management
+
+###### 8.1. Definition
+
+- `Risks`
+
+  - Potential events that can impact your project
+
+  - Can be internal (within the control of the project team) 
+
+    or external (outside of the project team’s control)
+
+  > e.g. Cost overrun, scope creep, personnel turnover, stakeholder dissatisfaction
+
+###### 8.2. Process
+
+- Identify
+- Analyse
+  - Involves estimating the likelihood and impact of each risk
+  - Risk probability, risk impact, risk exposure
+- Evaluate
+- Treat
+- Monitor
+
+###### 8.3. Techniques
+
+- **Mitigate** - by avoiding, accepting, reducing, or transferring (the risks)
+
+- Risk plan
+
+  - Defines how risk management processes will be executed. *Includes the budget, tools, and approaches that will be used*
+
+    > e.g. risk management plan, risk response plan, contingency plan, fallback plan (if contingency plan fails)
+
+- Addressing a risk
+
+  - Create a contingency plan with mitigation measures. 
+  - Identify risks, tasks associated with responding to them, and 
+  - Assign a risk owner responsibility
+
+---
+
+#### 9. Project scheduling
+
+###### 9.1. Producing a schedule
+
+- Phase - During the planning phase
+- Scope
+  - a project **timeline**,
+  - costs, resources, dependencies **associated with each task**, 
+  - who has **authority**,
+  - **scheduling tasks** chronologically
+
+###### 9.2.
+
+
 
 
 
 ---
 
+#### 10. Communcation planning
 
+
+
+---
+
+#### 11. Agile + lean development
+
+
+
+---
+
+#### 12. Project execution
+
+
+
+---
+
+#### 13. Quality control, software inspections, and reviews
+
+
+
+---
+
+#### 14. Development testing
+
+
+
+---
+
+#### 15. Clean code
+
+
+
+---
+
+#### 16. Monitoring and control
+
+
+
+---
+
+#### 17. Closing
+
+###### 17.1. Definition
+
+- Role in project - Final phase, Confirm performance requirements, document accomplishments
 

@@ -12,6 +12,8 @@
 > > Based on Wireshark
 >
 > 70% Exam - January
+>
+> > 12-15 questions with open questions
 
 ### Quick Start
 [WEEK1 - Network Layer](year2/5ccs2ins/w1.md)

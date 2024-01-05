@@ -537,9 +537,22 @@
   - Development tasks expressed as ‘person + need + purpose’
   - I.N.V.E.S.T. criteria - Guide to write meaningful user stories
     - Independent, Negotiable, Valuable, Estimable, Small, and Testable
-  - 
 
+- Approach to Effort Estimation
 
+  - Top-down approach - use estimation
+
+    focus on **relative size of a task** compared to others
+
+  - Other project management - bottom-up
+
+    **detail all requirements** and estimate task to complete those requirements in absolute time
+
+- Planning poker for story point estimation
+
+  > Introduce user story, everyone selects a card to represent their estimate for time required to complete, discuss rationale behind estimates, repeat process until a general consensus on time is reached
+
+- Project velocity - **divide total amount of work** completed <u>by the time it was done</u>
 
 ---
 
@@ -557,33 +570,155 @@
 
   and participation from key players, staff may be involved in other projects
 
-###### 12.3. Activaties
+###### 12.4. Techniques
 
-
-
-
+- Problems from poor execution
+  - Increased expenses, delays, quality issues, breakdown in client relations, lack of motivation in the team, loss of trust by clients, as well as employees
+- Importance-urgency matrix (Eisenhower Matrix)
+  - Task management tool that helps you organize + prioritise tasks by urgency and importance. 
+  - Can help focus on tasks needed to be performed soonest
+- Team accountability sessions
+  - Leader & members of a team review the strategic plan targets, outcomes, task completion, overall strategy progress
+  - A time for leaders to meet individually with employees to review goals and figure out what they will focus on and accomplish next
+  - Meetings happen weekly, sometimes daily, last no more than 20 minutes
+  - Have team members create & share weekly plans during a Monday morning check-in session
+- If an employee has poor performance
+  - Two-way conversation 
+    - Focusing on actions and not character. 
+    - Document worrying instances, provide to employee in advance
+  - Start conversation on a positive note, allow employee to be heard, document the conversation
+  - Follow up with the employee at regular time intervals
+  - Focus on results rather than intent
 
 ---
 
 #### 13. Quality control, software inspections, and reviews
 
+###### 13.1. Definition
 
+- `Software quality`
+  - How well software conforms to the specified design. 
+  - Also how it meets non-functional requirements such as security/maintainability
+- `Functional suitability`
+  - how well a product or system is able to provide functions that meet the stated + applied needs
+- `Maintainability` - how well a product or system is able to **meet reliability needs**
+- `Reliability` - how well a product or system **performs specified functions under specified conditions**
+- `QA` - provide confidence that quality requirements will be fulfilled
+- `QC` - detection in nature, focused on **fulfilling quality requirements**
+- `Testing`  - finding errors that surface **while program is executing**
+- `Inspections` - finding errors inherently in code as it sits there. Dynamic analysis
+- `Reviews`
+  - systematic study of source code
+  - Uncover errors missed during initial development process, increase software quality
+- `Controlling software quality` - testing & inspection
+
+###### 13.2. Code Review
+
+- Process (Formal)
+  - Needs to be planned and prepared - goal and scope, and criteria
+  - Look through the code line by line, entire team can review all the code
+  - Issues grouped by author, each author assigned the task of addressing the flaws they are responsible for
+
+###### 13.3. Review vs inspection
+
+- Inspection
+  - Inspection is more labour-intensive
+  - Updating old code and refactoring
+- Review
+  - Review is more focused on small sets of changes
 
 ---
 
 #### 14. Development testing
 
+###### 14.1. Definition
 
+- Phase - Performed during construction phase of lifecycle
+  - Software testing that takes place as software is being developed
+
+###### 14.2. Techniques
+
+- Unit tests - **Tests single component** of the software in isolation
+
+  - <u>Most efficient type</u> of test when only testing small chunk of code - pinpoints the cause directly
+  - Software isn’t tested solely by unit testing as real software is not a connection of independent units, and units depend on one another
+
+- Integration testing - Run tests on **multiple combined units**, when there are dependencies between units
+
+  >e.g. 
+  >
+  >A function A might call a function B so that function A is dependent on function B. The easiest way to write tests of function A involves testing both functions together, by calling A for a range of inputs and comparing actual outputs with expectations. In other words, we would be testing functions A and B together.
+
+  - Alternatively, test the interface between units, *e.g., a function makes calls on a web service to retrieve data*
+
+- Mocking
+
+  - Software testing technique where fake objects simulate the behaviour of real components, *such as using a web service to retrieve data*
+
+- User interface testing - tests the entire system, unless certain components are mocked
+
+  - Use automated tests to prescribe by means of examples how you want your source code to behave. In other words, start by treating automated tests as a form of software specifications
+  - Tools automate what a human tester would do when they run the application and interact with it through its UI
+
+- Partition testing - Partition the space of possible inputs and outputs into meaningfully distant categories
+
+  - Can then define a set of test cases to ensure all sets in the partition are covered by test cases
+  - Blackbox testing - absence of knowledge of source code
+
+- Coverage testing - How much of your source code is run or touched during the execution of a test suite
+
+  - Proportion of program statements covered by testing (python → each line = a program statement)
+  - Types 
+    - branch coverage(proportion of all branches covered), 
+    - loop coverage(proportion of iterations that have been executed 0 times, 1 time, multiple times), 
+    - condition coverage(looks at condition statements), 
+    - path coverage(proportion of possible paths through the code that have been executed)
 
 ---
 
 #### 15. Clean code
 
+###### 15.1. Definition
 
+- `Technical debt` - Reflects the implied cost of additional rework caused by choosing an easy approach instead of using a better approach that would take longer
+- `Clean code` - reduce technical debt, stand test of time
+
+###### 15.2. Techniques
+
+- Choose suitable names
+
+  - Intention revealing names - choose a word with meaning
+  - Avoid generic names, don’t make names too long or short
+  - Use names that can be pronounced easily, use concepts consistently
+
+- Comments
+
+  - Don’t comment obvious code
+  - Update comments when needed
+
+- Clean functions
+
+  - Do just one thing, use one level of abstraction
+
+  - **Stepdown rule** - read through program as through it was a set of paragraphs
+
+  - Command query separation – functions <u>do something or answer something</u>, not both
+
+  - DRY - Don’t Repeat Yourself, 
+
+    WET - Write Everything Twice
+
+  - Limit args on a function where possible
 
 ---
 
 #### 16. Monitoring and control
+
+###### 16.1. Definition
+
+
+
+
 
 
 
@@ -594,4 +729,20 @@
 ###### 17.1. Definition
 
 - Role in project - Final phase, Confirm performance requirements, document accomplishments
+
+###### 17.2. Activities
+
+- Closing Activities
+  - submit final documents, 
+  - risk management closure, 
+  - gathering lesson learned, 
+  - conduct project closure, 
+  - release project team
+- Failing to close
+  - put organization at risk, 
+  - prevent organization reaping the benefits, 
+  - losses for the organization
+- Assessing a project
+  - evaluate whether or not it met the primary objectives, 
+  - check satisfaction of stakeholders and customers
 

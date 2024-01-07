@@ -281,7 +281,7 @@
   - stakeholders
 - Initiation vs. other stages
   - Initiation
-    - Define project, set goals, communicate with stakeholders to understand desired outcomes, identify scope, sort out budget and time constraints
+    - Define project, set goals, communicate with stakeholders to understand desired outcomes, identify scope, sort out **budget** and time constraints
   - Other stages
     - Detailed planning, execution of tasks, monitoring and controlling project progress, and closing the project upon completion
 
@@ -566,29 +566,35 @@
 
 ###### 12.2. Challenges
 
-- Ambitious goas and timelines, lack of clarity about vision or goals, lack of buy-in
-
-  and participation from key players, staff may be involved in other projects
+- Ambitious goas and timelines, 
+- lack of clarity about vision or goals, 
+- lack of buy-in and participation from key players, 
+- staff may be involved in other projects
 
 ###### 12.4. Techniques
 
 - Problems from poor execution
-  - Increased expenses, delays, quality issues, breakdown in client relations, lack of motivation in the team, loss of trust by clients, as well as employees
+  - Increased expenses, delays, quality issues, 
+  - breakdown in client relations, 
+  - lack of motivation in the team, 
+  - loss of trust by clients, as well as employees
 - Importance-urgency matrix (Eisenhower Matrix)
   - Task management tool that helps you organize + prioritise tasks by urgency and importance. 
   - Can help focus on tasks needed to be performed soonest
 - Team accountability sessions
   - Leader & members of a team review the strategic plan targets, outcomes, task completion, overall strategy progress
+  
+    > i.e. Regular team meetings
   - A time for leaders to meet individually with employees to review goals and figure out what they will focus on and accomplish next
   - Meetings happen weekly, sometimes daily, last no more than 20 minutes
   - Have team members create & share weekly plans during a Monday morning check-in session
 - If an employee has poor performance
   - Two-way conversation 
-    - Focusing on actions and not character. 
-    - Document worrying instances, provide to employee in advance
+    - **Focusing on actions** and not character. 
+    - **Document worrying instances**, provide to employee in advance
   - Start conversation on a positive note, allow employee to be heard, document the conversation
   - Follow up with the employee at regular time intervals
-  - Focus on results rather than intent
+  - **Focus on results** rather than intent
 
 ---
 
@@ -717,7 +723,7 @@
 ###### 16.1. Definition
 
 - Role in project - Occurs in tandem with execution
-- Measure track progress, review status, identifypotential problems
+- **Measure track progress**, review status, identifypotential problems
 
 ###### 16.2 Acitivities
 
@@ -758,7 +764,7 @@
   - release project team
 - Failing to close
   - put organization at risk, 
-  - prevent organization reaping the benefits, 
+    - prevent organization reaping the benefits, 
   - losses for the organization
 - Assessing a project
   - evaluate whether or not it met the primary objectives, 

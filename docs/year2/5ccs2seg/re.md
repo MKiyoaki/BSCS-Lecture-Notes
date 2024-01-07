@@ -20,17 +20,17 @@
 
 ###### 1.3. Project Life Cycle
 
-- Initiating - clearly defining the <u>scope and purpose</u> of a project
+- **Initiating** - clearly defining the <u>scope and purpose</u> of a project
 
-- Planning - establishing <u>detailed plans</u> for how the project will be executed
+- **Planning** - establishing <u>detailed plans</u> for how the project will be executed
 
-- Executing - coordinating people and resources to <u>carry out the project plan</u>
+- **Executing** - coordinating people and resources to <u>carry out the project plan</u>
 
-- Monitoring & controlling - tracking, reviewing, and regulating progress and
+- **Monitoring & controlling** - tracking, reviewing, and regulating progress and
 
   performance
 
-- Closing - <u>finalizing</u> all project activities and completing deliverables
+- **Closing** - <u>finalizing</u> all project activities and completing deliverables
 
 ---
 
@@ -125,7 +125,7 @@
 
 - Definition
 
-  The uncontrolled expansion of project scope, often leading to delays, increased costs, and diminished quality. 
+  The <u>uncontrolled expansion of project scope</u>, often leading to delays, increased costs, and diminished quality. 
 
   It occurs when additional features, functionalities, or requirements are added to the project without proper planning or authorization
 
@@ -716,7 +716,29 @@
 
 ###### 16.1. Definition
 
+- Role in project - Occurs in tandem with execution
+- Measure track progress, review status, identifypotential problems
 
+###### 16.2 Acitivities
+
+- Check whether project is going as planned and whether the project is deviating from requirements
+- Failing to conduct monitoring
+  - missed deadlines, scope creep, overspending
+- Target vs. risk vs. danger
+  - A project is considered **on target** if it is progressing as planned, meeting its milestones, and staying within its budget. 
+  - A project is **at risk** if there are identified potential threats that could negatively impact its successful completion.
+  - A project is **in danger** when it’s facing significant issues that are not being addressed and could lead to project failure.
+
+###### 16.3. Techniques
+
+- Approach to monitoring
+  - identify & track risks, monitor for triggers, design response plans, react when new risks occur
+- Project health assessment
+  - independent review of a project to ensure it is doing what it says it will, and that the documentation is in order
+- Manage scope change, scope creep
+  - set clear goals and expectations, always be communicating
+- Negotiating with stakeholders
+  - make preparations, identify areas of negotiation, bargain, close. Have clear objectives
 
 
 

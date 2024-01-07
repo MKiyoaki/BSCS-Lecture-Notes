@@ -93,6 +93,10 @@
   - The Halting Problem - Prove something is undecidable by *contradiction*
   
     > Can swap to Accept or Reject Problem
+    >
+    > 1. Assume there is a decidable algorithm for the problem
+    > 2. Construct another method that is totally opposite to the original method, and accept the original problem as input
+    > 3. Prove that there is a contradiction
 
 
 #### 3. Some Definitions

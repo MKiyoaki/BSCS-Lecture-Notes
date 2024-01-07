@@ -328,7 +328,7 @@
 - Accept all ideas, 
 - Build on others’ ideas, 
 - No criticism, 
-- Quantity > Quality 
+- **Quantity > Quality** 
 
 ###### 5.3. Key requirement
 
@@ -562,7 +562,9 @@
 
 - Phase - 3rd phase of lifecycle, usually the longest and most demanding
 - Project execution vs. other stages
-  - Coordinating resources, managing stakeholders, implementing project deliverables
+  - Coordinating resources, 
+  - managing stakeholders, 
+  - implementing project deliverables
 
 ###### 12.2. Challenges
 
@@ -649,7 +651,7 @@
   - <u>Most efficient type</u> of test when only testing small chunk of code - pinpoints the cause directly
   - Software isn’t tested solely by unit testing as real software is not a connection of independent units, and units depend on one another
 
-- Integration testing - Run tests on **multiple combined units**, when there are dependencies between units
+- **Integration testing** - Run tests on **multiple combined units**, when there are dependencies between units
 
   >e.g. 
   >
@@ -657,21 +659,21 @@
 
   - Alternatively, test the interface between units, *e.g., a function makes calls on a web service to retrieve data*
 
-- Mocking
+- **Mocking**
 
   - Software testing technique where fake objects simulate the behaviour of real components, *such as using a web service to retrieve data*
 
-- User interface testing - tests the entire system, unless certain components are mocked
+- **User interface testing** - tests the entire system, unless certain components are mocked
 
   - Use automated tests to prescribe by means of examples how you want your source code to behave. In other words, start by treating automated tests as a form of software specifications
   - Tools automate what a human tester would do when they run the application and interact with it through its UI
 
-- Partition testing - Partition the space of possible inputs and outputs into meaningfully distant categories
+- **Partition testing** - Partition the space of possible inputs and outputs into meaningfully distant categories
 
   - Can then define a set of test cases to ensure all sets in the partition are covered by test cases
   - Blackbox testing - absence of knowledge of source code
 
-- Coverage testing - How much of your source code is run or touched during the execution of a test suite
+- **Coverage testing** - How much of your source code is run or touched during the execution of a test suite
 
   - Proportion of program statements covered by testing (python → each line = a program statement)
   - Types 

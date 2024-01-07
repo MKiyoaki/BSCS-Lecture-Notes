@@ -38,7 +38,7 @@ READING WEEK
 
 SMALL GROUP PROJECT
 
-[REVISION]((year2/5ccs2seg/re.md))
+[REVISION](year2/5ccs2seg/re.md)
 
 MAJOR GROUP PROJECT
 

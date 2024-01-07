@@ -740,10 +740,6 @@
 - Negotiating with stakeholders
   - make preparations, identify areas of negotiation, bargain, close. Have clear objectives
 
-
-
-
-
 ---
 
 #### 17. Closing

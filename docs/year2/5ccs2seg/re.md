@@ -479,8 +479,8 @@
     - finish to finish (Task B cannot finish until Task A is finished), 
     - start to start (Task B cannot start until Task A has started), 
     - start to finish (Task B cannot finish until Task A has started)
-- Gantt chart - Horizontal bar chart
-  - Used to illustrate the timeline of a project
+- **Gantt chart** - Horizontal bar chart
+  - Used to <u>illustrate the timeline of a project</u>
   - Gather information about all tasks and processes, 
   - evaluate dependency and relationships between different phases & tasks, 
   - create a timeline, 
@@ -513,8 +513,7 @@
 
 ###### 11.1. Agile
 
-- Definition
-  - Values flexibility, collaboration, customer satisfaction
+- Definition - Values flexibility, collaboration, customer satisfaction
 - Features
   - Satisfy the customer through early and continuous delivery of valuable software, 
   - welcome changing requirements, 
@@ -522,8 +521,7 @@
 
 ###### 11.2. Lean
 
-- Definition
-  - Eliminate waste
+- Definition - Eliminate waste
 - Features
   - Specify value from the standpoint of the end customer, 
   - identify all steps required to achieve, 
@@ -535,7 +533,7 @@
 
 - User stories
   - Development tasks expressed as ‘person + need + purpose’
-  - I.N.V.E.S.T. criteria - Guide to write meaningful user stories
+  - **I.N.V.E.S.T. criteria** - Guide to write meaningful user stories
     - Independent, Negotiable, Valuable, Estimable, Small, and Testable
 
 - Approach to Effort Estimation
@@ -614,7 +612,7 @@
 - `QA` - provide confidence that quality requirements will be fulfilled
 - `QC` - detection in nature, focused on **fulfilling quality requirements**
 - `Testing`  - finding errors that surface **while program is executing**
-- `Inspections` - finding errors inherently in code as it sits there. Dynamic analysis
+- `Inspections` - finding errors inherently in code as it sits there. **Dynamic analysis**
 - `Reviews`
   - systematic study of source code
   - Uncover errors missed during initial development process, increase software quality
@@ -646,7 +644,7 @@
 
 ###### 14.2. Techniques
 
-- Unit tests - **Tests single component** of the software in isolation
+- **Unit tests** - **Tests single component** of the software in isolation
 
   - <u>Most efficient type</u> of test when only testing small chunk of code - pinpoints the cause directly
   - Software isn’t tested solely by unit testing as real software is not a connection of independent units, and units depend on one another
@@ -663,7 +661,7 @@
 
   - Software testing technique where fake objects simulate the behaviour of real components, *such as using a web service to retrieve data*
 
-- **User interface testing** - tests the entire system, unless certain components are mocked
+- **User interface testing** - **tests the entire system**, unless certain components are mocked
 
   - Use automated tests to prescribe by means of examples how you want your source code to behave. In other words, start by treating automated tests as a form of software specifications
   - Tools automate what a human tester would do when they run the application and interact with it through its UI
@@ -710,11 +708,11 @@
 
   - **Stepdown rule** - read through program as through it was a set of paragraphs
 
-  - Command query separation – functions <u>do something or answer something</u>, not both
+  - **Command query separation** – functions <u>do something or answer something</u>, not both
 
-  - DRY - Don’t Repeat Yourself, 
+  - **DRY** - Don’t Repeat Yourself, 
 
-    WET - Write Everything Twice
+    **WET** - Write Everything Twice
 
   - Limit args on a function where possible
 
@@ -766,8 +764,7 @@
   - release project team
 - Failing to close
   - put organization at risk, 
-    - prevent organization reaping the benefits, 
-  - losses for the organization
+  - prevent organization reaping the benefits, losses for the organization
 - Assessing a project
   - evaluate whether or not it met the primary objectives, 
   - check satisfaction of stakeholders and customers

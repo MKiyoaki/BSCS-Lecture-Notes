@@ -112,7 +112,7 @@
   
     >$X \leq_p Y \implies$
     >
-    >there is a computable function $f: \Sigma^* \to \Sigma^*$ such that for $w \in X$ exist $f(w) \in Y$
+    >there is a **computable** function $f: \Sigma^* \to \Sigma^*$ such that for $w \in X$ exist $f(w) \in Y$
   
 - WEEK VI
   - R-Approxiable and Unapproxiable
@@ -134,25 +134,33 @@
   
     - BPP
   
-      >Probabilistic Sound
+      >If there is a Turing Machine for this language that is 
       >
-      >Probabilistic Complete
+      >1. Probabilistic Sound
+      >2. Probabilistic Complete
+      >3. Runs in polynomial time
       >
-      >NP
+      >> Note that BPP concludes ZPP but not NP
   
     - ZPP
-  
-      >Sound
+    
+      >If there is a Turing Machine for this language that is 
       >
-      >Complete
+      >1. Sound
+      >2. Complete
+      >3. Expected to run in polynomial time
       >
-      >Expected to be NP
+      >> Note that ZPP is NP
   
 - WEEK X
   
   - Mapping reduction
   
-    >$w \in A \implies f(w) \in B$
+    >$X \leq_m Y \implies$
+    >
+    >there is a function $f: \Sigma^* \to \Sigma^*$ such that for $w \in X$ exist $f(w) \in Y$
+    >
+    >i.e., Polynomial reduction is a special case for mapping reduction
   
   - C.E.
   

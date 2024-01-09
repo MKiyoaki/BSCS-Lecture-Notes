@@ -72,7 +72,7 @@
     > >1. Cannot be solved in polynomial time
     > >
     > >   (for SAT like, take all solutions; for HAMILTONIAN like, take all orderring results. And there are expontential solutions at last)
-    > >2. Can construct deterministic turing machine and run it in parallel in polynomial time
+    > >2. Can construct non-deterministic turing machine and run it in parallel in polynomial time
     > >
     > >Explain the reasons for cannot be or can be run in polynomial time is important
 
@@ -112,7 +112,7 @@
   
     >$X \leq_p Y \implies$
     >
-    >there is a **computable** function $f: \Sigma^* \to \Sigma^*$ such that for $w \in X$ exist $f(w) \in Y$
+    >there is a **computable in polynomial time** function $f: \Sigma^* \to \Sigma^*$ such that for $w \in X$ exist $f(w) \in Y$
   
 - WEEK VI
   - R-Approxiable and Unapproxiable
@@ -158,7 +158,7 @@
   
     >$X \leq_m Y \implies$
     >
-    >there is a function $f: \Sigma^* \to \Sigma^*$ such that for $w \in X$ exist $f(w) \in Y$
+    >there is a **computable** function $f: \Sigma^* \to \Sigma^*$ such that for $w \in X$ exist $f(w) \in Y$
     >
     >i.e., Polynomial reduction is a special case for mapping reduction
   

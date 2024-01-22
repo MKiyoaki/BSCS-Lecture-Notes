@@ -26,12 +26,14 @@
 - [5CCS2FC2 - Foundation of Computing II](year2/5ccs2fc2.md)
 - [5CCS2SEG - Software Engineering Group Project](year2/5ccs2seg.md)
 - [5CCS2INS - Internet System](year2/5ccs2ins.md)
-- 5CCS2PEP - Practical Experiences of Programming 
+- [5CCS2PEP - Practical Experiences of Programming](year2/5ccs2pep.md) 
+- 5CCS2ITR - Introduction to Robotics
 
 #### Term 2
-- 5CCS2OSC
-- 5CCS2INT
-- 5CCS2SAS
+- [5CCS2OSC - Operating System](year2/5ccs2osc.md)
+- [5CCS2INT - Introduction to Artificial Intelligence]((year2/5ccs2int.md))
+- [5CCS2PLD - Programming Language Design Paradiam]((year2/5ccs2pld.md))
+- [5CCE2SAS - Signal System]((year2/5cce2sas.md))
 
 #### Additional
 - 4CCM111A

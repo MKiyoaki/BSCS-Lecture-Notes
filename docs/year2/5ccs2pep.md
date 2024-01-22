@@ -11,26 +11,10 @@
 > 50% Scala Coursework - 04/01
 
 ### Quick Start
-WEEK1 - C++
-
-WEEK2 - C++
-
-WEEK3 - C++
-
-WEEK4 - Coursework 1
-
-WEEK5 - Coursework 1
+WEEK1 - 5 C++
 
 READING WEEK
 
-WEEK6 - 
-
-WEEK7 -
-
-WEEK8 -
-
-WEEK9 -
-
-WEEK10
+WEEK6 - 10 Scala
 
 REVISION

@@ -9,7 +9,7 @@
 >  - MCQ and typing questions
 >
 
-#### 1. Calculation
+### 1. Calculation
 
 - WEEK I
 
@@ -53,7 +53,9 @@
 
   - Simplex Method
 
-#### 2. Proof
+---
+
+### 2. Proof
 
 >May give a template in proof
 
@@ -98,8 +100,9 @@
     > 2. Construct another method that is totally opposite to the original method, and accept the original problem as input
     > 3. Prove that there is a contradiction
 
+---
 
-#### 3. Some Definitions
+### 3. Some Definitions
 
 - WEEK I
   - Language - Note that empty set is the subset of every set
@@ -171,7 +174,9 @@
     >If $L$ has a complement $\overline{L}$ that is C.E.
   
 
-#### 4. Some Algorithms
+---
+
+### 4. Some Algorithms
 
 - WEEK IV
   - BFS and DFS - $O(|V|+|E|)$

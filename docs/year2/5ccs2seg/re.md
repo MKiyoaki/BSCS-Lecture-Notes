@@ -2,23 +2,23 @@
 
 >[🏠 MENU - 5CCS2SEG](year2/5ccs2seg.md)
 
-#### 1. Introduction to projects & project management
+### 1. Introduction to projects & project management
 
-###### 1.1. Definition
+##### 1.1. Definition
 
 - `Project` - a temporary process undertaken to <u>create a unique product</u>
   - Difference from operations
     - Projects are **unique & temporary**
     - Projects have **specific goals** and a **defined beginning and end**
 
-###### 1.2. Issues in project management
+##### 1.2. Issues in project management
 
 - `Constraints` - Limitations in resources *like time, budget and scope*
 - `People` - Managing and coordinating *team members* with diverse skills and ways of working
 - `Communcation` - Ensuring effective *information flow*, avoiding breakdowns
 - `Risk` - Identifying, assessing, and mitigating *potential issues*
 
-###### 1.3. Project Life Cycle
+##### 1.3. Project Life Cycle
 
 - **Initiating** - clearly defining the <u>scope and purpose</u> of a project
 
@@ -34,15 +34,15 @@
 
 ---
 
-#### 2. Project Constraints
+### 2. Project Constraints
 
-###### 2.1. Definition
+##### 2.1. Definition
 
 - `Project Constraints` 
   - A limitation or restriction that hinders the flexibility of a project. 
   - Can arise from various factors, *including project scope budget, time, resources, quality, and risk*. 
 
-###### 2.2. Recognition
+##### 2.2. Recognition
 
 - Recognizing factors that define the parameters within which a project must operate
   - Affecting its scope, 
@@ -50,7 +50,7 @@
   - budget, 
   - or quality
 
-###### 2.3. Models of project constraints
+##### 2.3. Models of project constraints
 
 - Iron Triangle 
 
@@ -75,7 +75,7 @@
     - Includes a broader set of constraints, incorporating stakeholders and risk as crucial elements.
     - Acknowledges that project success is influenced by a broader set of factors beyond the traditional three constraints.
 
-###### 2.4. Types of project constraints
+##### 2.4. Types of project constraints
 
 > Different constraints are interconnected; altering one may affect others. 
 >
@@ -88,7 +88,7 @@
 - **Risk Constraint** - <u>Potential threats</u> that may impact project success.
 - **Resource Constraint** - Limitation on <u>people, equipment, or materials</u>. 
 
-###### 2.5. Costs Constraints
+##### 2.5. Costs Constraints
 
 - Types
   - `Direct costs` - Directly attributable to the project *(e.g., software development tools)*.
@@ -105,7 +105,7 @@
 >
 > The project budget is limited to $200,000, which includes expenses for software licenses, hardware, salaries, and other resources.
 
-###### 2.6. Time Constraints
+##### 2.6. Time Constraints
 
 > Project deadlines and time constraints directly impact project planning and execution.
 
@@ -121,7 +121,7 @@
 >
 > The software must be developed and released within six months to align with market demands and upcoming industry events.
 
-###### 2.7. Scope Creep
+##### 2.7. Scope Creep
 
 - Definition
 
@@ -146,11 +146,9 @@
 >
 > The project is limited to developing a mobile application with specific features, excluding additional functionalities to stay within the agreed-upon scope.
 
-###### 2.8. Quality Constraints
+##### 2.8. Quality Constraints
 
-- Definition
-
-  Ensure that the project's deliverables meet specified standards and expectations
+- Definition - Ensure that the project's deliverables meet specified standards and expectations
 
 - What to do
 
@@ -168,7 +166,7 @@
 >
 > The software must adhere to industry standards, pass thorough testing, and achieve a minimum 99% bug-free rate before deployment.
 
-###### 2.9. Risk Constraints
+##### 2.9. Risk Constraints
 
 - Definition
 
@@ -189,7 +187,7 @@
 >
 > The project faces a potential risk of delays due to uncertain regulatory changes, and a contingency plan is developed to address this risk if it materializes.
 
-###### 2.10. Resource Constraints
+##### 2.10. Resource Constraints
 
 - Definition
 
@@ -218,9 +216,9 @@
 >
 >The development team consists of three software engineers and one UX/UI designer, and additional hiring is not possible due to budget limitations, impacting the available skill set and workforce.
 
-#### 3. Leadership & Authority
+### 3. Leadership & Authority
 
-###### 3.1. Definition
+##### 3.1. Definition
 
 - `Formal Authority` - The authority provided **by an organization or the law** to an individual 
   - Enabling them to carry out certain actions in accordance with their own will, and
@@ -229,7 +227,7 @@
 - `Informal Authority` - The authority that **a manager holds over their subordinates** due to certain qualities that the subordinates value in them.
   - **Role** - Is becoming increasingly important in networked, pluralistic organizations that need to rapidly adapt in a complex world.
 
-###### 3.2. Lack of Authority
+##### 3.2. Lack of Authority
 
 - Recognizing
   - A lack of **formal authority** - when there is confusion about roles and responsibilities, disagreements about who has the decision-making power, and risks and issues are not being formally managed.
@@ -244,7 +242,7 @@
     - reduced influence over attitudes and behaviors, and 
     - a lack of conformity with acceptance.
 
-###### 3.3. Four Foundational Behaviors in Project Management
+##### 3.3. Four Foundational Behaviors in Project Management
 
 - Contents
 
@@ -269,9 +267,9 @@
 
 ---
 
-#### 4. Project initiation
+### 4. Project initiation
 
-###### 4.1. Definition
+##### 4.1. Definition
 
 - Role in project - First phase of project, define project, develop business case
 - Questions during project initiation
@@ -285,12 +283,12 @@
   - Other stages
     - Detailed planning, execution of tasks, monitoring and controlling project progress, and closing the project upon completion
 
-###### 4.2. Stakeholders & Key Stakeholders
+##### 4.2. Stakeholders & Key Stakeholders
 
 - Stakeholders - Individual, group, or organization that’s **impacted by the outcome** of a project or business venture
 - Key Stakeholders - Most crucial stakeholders, **have power to dictate project success**
 
-###### 4.3. Techniques
+##### 4.3. Techniques
 
 - Project Expectations and Constraints
   - **Expectations** - desired outcomes, goals
@@ -309,9 +307,9 @@
 
 ---
 
-#### 5. **Brainstorm**
+### 5. **Brainstorm**
 
-###### 5.1. Definition
+##### 5.1. Definition
 
 - `Brainstorm`
 
@@ -323,19 +321,19 @@
 
   - How? - Define a topic & context, pick facilitator, invite range of participants, set agenda
 
-###### 5.2. Principles
+##### 5.2. Principles
 
 - Accept all ideas, 
 - Build on others’ ideas, 
 - No criticism, 
 - **Quantity > Quality** 
 
-###### 5.3. Key requirement
+##### 5.3. Key requirement
 
 - **Record ideas** - Audio recorder, take notes, photograph visual aids
 - **Post-session analysis** - Eliminate duplicates, remove nonsense, evaluate ideas, decide on usable ideas
 
-###### 5.4. Key stakeholder **D.A.N.C.E.**
+##### 5.4. Key stakeholder **D.A.N.C.E.**
 
 - Content
   - Decision
@@ -348,9 +346,9 @@
 
 ---
 
-#### 6. Interview
+### 6. Interview
 
-###### 6.1. Definition
+##### 6.1. Definition
 
 - `Interview`
   - A conversation where one person asks questions, and the other answers. 
@@ -361,7 +359,7 @@
     - weighing pros and cons, 
     - reaching logical decisions
 
-###### 6.2. Techinques
+##### 6.2. Techinques
 
 - Conducting an interview
 
@@ -392,9 +390,9 @@
 
 ---
 
-#### 7. Project planning
+### 7. Project planning
 
-###### 7.1. Definition
+##### 7.1. Definition
 
 - Role in the project
   - 2nd phase of management lifecycle
@@ -402,7 +400,7 @@
 - Project planning vs. other stages
   - Decompose a large project into smaller tasks, build your team, prepare a schedule for task completion
 
-###### 7.2. Activities
+##### 7.2. Activities
 
 >No need to consider about the stakeholders or budget
 
@@ -414,9 +412,9 @@
 
 ---
 
-#### 8. Risk management
+### 8. Risk management
 
-###### 8.1. Definition
+##### 8.1. Definition
 
 - `Risks`
 
@@ -428,7 +426,7 @@
 
   > e.g. Cost overrun, scope creep, personnel turnover, stakeholder dissatisfaction
 
-###### 8.2. Process
+##### 8.2. Process
 
 - Identify
 - Analyse
@@ -438,7 +436,7 @@
 - Treat
 - Monitor
 
-###### 8.3. Techniques
+##### 8.3. Techniques
 
 - **Mitigate** - by avoiding, accepting, reducing, or transferring (the risks)
 
@@ -456,9 +454,9 @@
 
 ---
 
-#### 9. Project scheduling
+### 9. Project scheduling
 
-###### 9.1. Producing a schedule
+##### 9.1. Producing a schedule
 
 - Phase - During the planning phase
 - Scope
@@ -467,7 +465,7 @@
   - who has **authority**,
   - **scheduling tasks** chronologically
 
-###### 9.2. Techiniques
+##### 9.2. Techiniques
 
 - Measuring time and effort 
 - Task dependencies and their effect
@@ -489,9 +487,9 @@
 
 ---
 
-#### 10. Communcation planning
+### 10. Communcation planning
 
-###### 10.1. Communcation planning
+##### 10.1. Communcation planning
 
 - Reasons
   - Establish significant relationships between a business and its key audiences
@@ -499,7 +497,7 @@
 - Techniques
   - Establish communication methods, align on cadence
 
-###### 10.2. Types of communcation
+##### 10.2. Types of communcation
 
 - Email, 
 - video calls,
@@ -509,9 +507,9 @@
 
 ---
 
-#### 11. Agile + lean development
+### 11. Agile + lean development
 
-###### 11.1. Agile
+##### 11.1. Agile
 
 - Definition - Values flexibility, collaboration, customer satisfaction
 - Features
@@ -519,7 +517,7 @@
   - welcome changing requirements, 
   - promote sustainable development
 
-###### 11.2. Lean
+##### 11.2. Lean
 
 - Definition - Eliminate waste
 - Features
@@ -529,7 +527,7 @@
   - let customers pull value from the next upstream activity, 
   - strive for perfection
 
-###### 11.3. Techniques
+##### 11.3. Techniques
 
 - User stories
   - Development tasks expressed as ‘person + need + purpose’
@@ -554,9 +552,9 @@
 
 ---
 
-#### 12. Project execution
+### 12. Project execution
 
-###### 12.1. Definition
+##### 12.1. Definition
 
 - Phase - 3rd phase of lifecycle, usually the longest and most demanding
 - Project execution vs. other stages
@@ -564,14 +562,14 @@
   - managing stakeholders, 
   - implementing project deliverables
 
-###### 12.2. Challenges
+##### 12.2. Challenges
 
 - Ambitious goas and timelines, 
 - lack of clarity about vision or goals, 
 - lack of buy-in and participation from key players, 
 - staff may be involved in other projects
 
-###### 12.4. Techniques
+##### 12.3. Techniques
 
 - Problems from poor execution
   - Increased expenses, delays, quality issues, 
@@ -598,9 +596,9 @@
 
 ---
 
-#### 13. Quality control, software inspections, and reviews
+### 13. Quality control, software inspections, and reviews
 
-###### 13.1. Definition
+##### 13.1. Definition
 
 - `Software quality`
   - How well software conforms to the specified design. 
@@ -618,14 +616,14 @@
   - Uncover errors missed during initial development process, increase software quality
 - `Controlling software quality` - testing & inspection
 
-###### 13.2. Code Review
+##### 13.2. Code Review
 
 - Process (Formal)
   - Needs to be planned and prepared - goal and scope, and criteria
   - Look through the code line by line, entire team can review all the code
   - Issues grouped by author, each author assigned the task of addressing the flaws they are responsible for
 
-###### 13.3. Review vs inspection
+##### 13.3. Review vs inspection
 
 - Inspection
   - Inspection is more labour-intensive
@@ -635,14 +633,14 @@
 
 ---
 
-#### 14. Development testing
+### 14. Development testing
 
-###### 14.1. Definition
+##### 14.1. Definition
 
 - Phase - Performed during construction phase of lifecycle
   - Software testing that takes place as software is being developed
 
-###### 14.2. Techniques
+##### 14.2. Techniques
 
 - **Unit tests** - **Tests single component** of the software in isolation
 
@@ -682,14 +680,14 @@
 
 ---
 
-#### 15. Clean code
+### 15. Clean code
 
-###### 15.1. Definition
+##### 15.1. Definition
 
 - `Technical debt` - Reflects the implied cost of additional rework caused by choosing an easy approach instead of using a better approach that would take longer
 - `Clean code` - reduce technical debt, stand test of time
 
-###### 15.2. Techniques
+##### 15.2. Techniques
 
 - Choose suitable names
 
@@ -718,14 +716,14 @@
 
 ---
 
-#### 16. Monitoring and control
+### 16. Monitoring and control
 
-###### 16.1. Definition
+##### 16.1. Definition
 
 - Role in project - Occurs in tandem with execution
 - **Measure track progress**, review status, identifypotential problems
 
-###### 16.2 Acitivities
+##### 16.2 Acitivities
 
 - Check whether project is going as planned and whether the project is deviating from requirements
 - Failing to conduct monitoring
@@ -735,7 +733,7 @@
   - A project is **at risk** if there are identified potential threats that could negatively impact its successful completion.
   - A project is **in danger** when it’s facing significant issues that are not being addressed and could lead to project failure.
 
-###### 16.3. Techniques
+##### 16.3. Techniques
 
 - Approach to monitoring
   - identify & track risks, monitor for triggers, design response plans, react when new risks occur
@@ -748,13 +746,13 @@
 
 ---
 
-#### 17. Closing
+### 17. Closing
 
-###### 17.1. Definition
+##### 17.1. Definition
 
 - Role in project - Final phase, Confirm performance requirements, document accomplishments
 
-###### 17.2. Activities
+##### 17.2. Activities
 
 - Closing Activities
   - submit final documents, 

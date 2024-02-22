@@ -14,11 +14,11 @@
 
 [WEEK2 - Multithreading in Java](year2/5ccs2osc/w2.md)
 
-[WEEK3 - ](year2/5ccs2osc/w3.md)
+[WEEK3 - Java synchronization](year2/5ccs2osc/w3.md)
 
-[WEEK4 - ]((year2/5ccs2osc/w4.md))
+[WEEK4 - Explicit locks, deadlock, semaphores]((year2/5ccs2osc/w4.md))
 
-[WEEK5 - ](year2/5ccs2osc/w5.md)
+[WEEK5 - Introduction to OSs](year2/5ccs2osc/w5.md)
 
 READING WEEK
 

@@ -10,13 +10,13 @@
 
 [WEEK1 - Introduction to Programming Languages](year2/5ccs2pld/w1.md)
 
-[WEEK2 - ](year2/5ccs2pld/w2.md)
+[WEEK2 - Imperative Languages](year2/5ccs2pld/w2.md)
 
-[WEEK3 - ](year2/5ccs2pld/w3.md)
+[WEEK3 - SIMP & Abstract Machine](year2/5ccs2pld/w3.md)
 
-[WEEK4 - ]((year2/5ccs2pld/w4.md))
+[WEEK4 - Induction & Structural Operational Semantics]((year2/5ccs2pld/w4.md))
 
-[WEEK5 - ](year2/5ccs2pld/w5.md)
+[WEEK5 - Revision I](year2/5ccs2pld/w5.md)
 
 READING WEEK
 

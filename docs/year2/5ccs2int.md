@@ -22,12 +22,10 @@ READING WEEK
 
 [WEEK6 - Unsupervised Learning](year2/5ccs2int/w6.md)
 
-[WEEK7 - ](year2/5ccs2int/w7.md)
+[WEEK7 - Supervised Learning](year2/5ccs2int/w7.md)
 
-[WEEK8 - ](year2/5ccs2int/w8.md)
+[WEEK8 - Reinforcement Learning](year2/5ccs2int/w8.md)
 
 [WEEK9 - AI Ethics](year2/5ccs2int/w9.md)
 
-[WEEK10 - ](year2/5ccs2int/w10.md)
-
-REVISION
+[WEEK10 - Revision](year2/5ccs2int/w10.md)

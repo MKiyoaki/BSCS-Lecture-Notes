@@ -22,11 +22,11 @@
 
 READING WEEK
 
-[WEEK6 - ](year2/5ccs2osc/w6.md)
+[WEEK6 - Memory Virtulisation I](year2/5ccs2osc/w6.md)
 
-[WEEK7 - ](year2/5ccs2osc/w7.md)
+[WEEK7 - Memory Virtulisation II](year2/5ccs2osc/w7.md)
 
-[WEEK8 - ](year2/5ccs2osc/w8.md)
+[WEEK8 - User-level Memory Allocations](year2/5ccs2osc/w8.md)
 
 [WEEK9 - ](year2/5ccs2osc/w9.md)
 

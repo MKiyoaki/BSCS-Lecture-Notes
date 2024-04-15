@@ -14,7 +14,7 @@
 
 [WEEK3 - SIMP & Abstract Machine](year2/5ccs2pld/w3.md)
 
-[WEEK4 - Induction & Structural Operational Semantics]((year2/5ccs2pld/w4.md))
+[WEEK4 - Induction & Structural Operational Semantics](year2/5ccs2pld/w4.md)
 
 [WEEK5 - Revision I](year2/5ccs2pld/w5.md)
 

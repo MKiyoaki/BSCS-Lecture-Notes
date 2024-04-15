@@ -20,9 +20,9 @@
 
 READING WEEK
 
-[WEEK6 - Introduction to Functional Programming I](year2/5ccs2pld/w6.md)
+[WEEK6 - Introduction to Functional Programming](year2/5ccs2pld/w6.md)
 
-[WEEK7 - Introduction to Functional Programming II](year2/5ccs2pld/w7.md)
+[WEEK7 - Functional Programming Types and Semantics](year2/5ccs2pld/w7.md)
 
 [WEEK8 - Logic Programming I](year2/5ccs2pld/w8.md)
 

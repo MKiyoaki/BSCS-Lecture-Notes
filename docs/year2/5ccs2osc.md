@@ -28,8 +28,8 @@ READING WEEK
 
 [WEEK8 - User-level Memory Allocations](year2/5ccs2osc/w8.md)
 
-[WEEK9 - ](year2/5ccs2osc/w9.md)
+[WEEK9 - Access Control](year2/5ccs2osc/w9.md)
 
-[WEEK10 - ](year2/5ccs2osc/w10.md)
+[WEEK10 - Unix](year2/5ccs2osc/w10.md)
 
 REVISION

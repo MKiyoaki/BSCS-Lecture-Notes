@@ -8,24 +8,24 @@
 ### Quick Start
 [WEEK1 - Introduction](year3/6ccs3cis/w1.md)
 
-[WEEK2 - ](year3/6ccs3cis/w2.md)
+[WEEK2 - Formal Cryptographic Scheme](year3/6ccs3cis/w2.md)
 
-[WEEK3 - ](year3/6ccs3cis/w3.md)
+[WEEK3 - Transposition and Subsitution Ciphers](year3/6ccs3cis/w3.md)
 
-[WEEK4 - ](year3/6ccs3cis/w4.md)
+[WEEK4 - Block Cipher](year3/6ccs3cis/w4.md)
 
-[WEEK5 - ](year3/6ccs3cis/w5.md)
+[WEEK5 - Mode of Operation](year3/6ccs3cis/w5.md)
 
 READING WEEK
 
-[WEEK6 - ](year3/6ccs3cis/w6.md)
+[WEEK6 - Number Theory & Group Theory](year3/6ccs3cis/w6.md)
 
-[WEEK7 - ](year3/6ccs3cis/w7.md)
+[WEEK7 - Public-Key Encryption](year3/6ccs3cis/w7.md)
 
-[WEEK8 - ](year3/6ccs3cis/w8.md)
+[WEEK8 - Digital Signatures](year3/6ccs3cis/w8.md)
 
-[WEEK9 - ](year3/6ccs3cis/w9.md)
+[WEEK9 - Zero-Knowledge Proofs](year3/6ccs3cis/w9.md)
 
-[WEEK10 - ](year3/6ccs3cis/w10.md)
+[WEEK10 - Post-Quantum Cryptography](year3/6ccs3cis/w10.md)
 
 [REVISION](year3/6ccs3cis/re.md)

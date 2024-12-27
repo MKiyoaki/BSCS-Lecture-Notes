@@ -48,7 +48,7 @@
 
 #### Term 1
 
-- [6CCS3AIN* - AI Reasoning and Decision Making](year3/6ccs3ain.md))
+- [6CCS3AIN* - AI Reasoning and Decision Making](year3/6ccs3ain.md)
 - [6CCS3CFL* - Compilers and Formal Languages](year3/6ccs3cfl.md)
 - [6CCS3CIS* - Crytography](year3/6ccs3cis.md)
 

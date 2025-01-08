@@ -30,8 +30,6 @@ READING WEEK
 
 [WEEK8 - Compiling Functional Languages](year3/6ccs3cfl/w8.md)
 
-[WEEK9 - Optimizations](year3/6ccs3cfl/w9.md)
+[WEEK9 - LLVM](year3/6ccs3cfl/w9.md)
 
-[WEEK10 - LLVM](year3/6ccs3cfl/w10.md)
-
-[REVISION](year3/6ccs3cfl/re.md)
+[WEEK10 - Revision](year3/6ccs3cfl/w10.md)

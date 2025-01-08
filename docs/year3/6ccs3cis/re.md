@@ -15,7 +15,7 @@
 
 ---
 
-### 11.2. 
+### 11.2. Overview 
 
 - W1
   - Content
@@ -72,7 +72,8 @@
     - Integers, primes, Modular arthmetic
       - Division with remainder
       - Congruent modulo
-      - Fermat Little Theory, Chinese Remainder Theory
+      - Fermat Little Theory, Extended Euler's Theorem
+      - Chinese Remainder Theory
     - Group Theory
       - Lagrange's Theorem
       - Combing Group Theory with Modular Arithmetic
@@ -87,19 +88,25 @@
   - Content
     - Factoring
     - RSA problem
-      - Definition of a PKE, correctness and IND-CPA security definitions
-      - Textbook RSA: correctness and (in)security. 
+      - PKE
+        - Definition of a PKE, correctness and IND-CPA security definitions
+      - **Textbook RSA**: 
+        - Correctness
+        - (in)security. 
     - Group-based key exchange and PKE
       - Diffie-Hellman key exchange
+        - correctness and man-in-the-middle attack
       - EI Gamal encryption scheme
+        - Correctness
+        - Security: Group Assupmtion
   - Problem Set
 - W8
   - Content
     - Digital Signatures scheme
       - Correctness and EUF-CMA security
-    - Textbook RSA signature
+    - **Textbook RSA signature**
       - Correctness, (in)security
-    - Hash function and RSA-FDH
+    - Hash function and **RSA-FDH**
   - Problem Set
 - W9
   - Content
@@ -108,8 +115,10 @@
     - Identification schemes
       - Definition, correctness, security
     - Fiat-Shamir ID scheme
+      - correctness and intuition on security
       - Transform to obtain a digital signature
     - Schnorr ID scheme
+      - correctness and intuition on security
   - Problem Set
 - W10
   - Content
@@ -120,3 +129,6 @@
       - LWE-based PKE
   - Problem Set
 
+---
+
+### 11.3. Cheat Sheet

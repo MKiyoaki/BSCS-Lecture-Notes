@@ -3,9 +3,39 @@
 ##### 0. Historical Ciphers
 
 1. Caeser Cipher
+   - Definition
+     - In the framework of SKE the encryption has $\mathcal{M, C, K}$ such that
+       - $\text{KGen}$ returns a $sk$ sampled from $\mathcal{K}$,
+       - $\text{Enc}(sk, m)$:
+         Parse $m = m_1m_2 ... m_l$ as individual characters. For $i \in \{1, ..., l\}$ let $c_i = m_i + sk \mod 26$ and return $c = c_1c_2 ... c_l$
+       - $\text{Dec}(sk, c)$:
+         Parse $c = c_1c_2 ... c_l$ as individual characters. For $i \in \{1, ..., l\}$ let $m_i = c_i - sk \mod 26$ and return $m = m_1m_2 ... m_l$
+   - Security
+     - No. Adversary can use select message attack by sending $m = 0$  such that $\text{Enc}(sk, m) = sk$
 2. Mono-alphabetic Cipher
+   - Definition
+     - In the framework of SKE the encryption has $\mathcal{M, C, K}$, define $\alpha = \{a, b, ... z\}$, such that
+       - $\text{KGen}$ returns a $sk$ sampled from $\mathcal{K}$, where $sk: \alpha \to \alpha$ is a permutation,
+       - $\text{Enc}(sk, m)$: Parse $m = m_1m_2 ... m_l$ as individual characters. Return $c = sk(m_1) ... sk(m_l)$, 
+       - $\text{Dec}(sk, c)$: Parse $c = c_1c_2 ... c_l$ as individual characters. Return $m = sk^{-1}(c_1) ... sk^{-1}(c_l)$. 
+   - Security
+     - No. Adversary can use select message attack by sending $m = \texttt{abcdefg...xzy}$ to observe the mapping relationship for the encryption algorithm. 
 3. Vegenère Cipher
+   - Definition
+     - In the framework of SKE the encryption has $\mathcal{M, C, K}$ such that
+       - $\text{KGen}$ returns a $sk$ sampled from $\mathcal{K}$ as $sk = sk_1 sk_2 ... sk_l$
+       - ...
+   - Security
+     - No. Adversary can use select message attack by sending $m = \texttt{aaaa...aaaa}$ with a length of $l$ such that $\text{Enc}(sk, m) = sk$. 
 4. One-time Pad
+   - Definition
+     - In the framework of SKE the encryption has $\mathcal{M, C, K}$ such that
+       - $\text{KGen}$ returns a $sk$ sampled from $\mathcal{K}$,
+       - $\text{Enc}(sk, m) = sk[l] \oplus m$
+       - $\text{Dec}(sk, c) = sk[l] \oplus c$
+   - Correctness
+   - Security
+     - Secure if the secret key is only used for once. 
 
 ---
 
@@ -26,6 +56,7 @@
        - $\mathcal{A}$ with $\text{Enc}(sk, \cdot)$ recevies $c = \text{Enc}(sk, m_b)$,
        - $\mathcal{A}$ outputs $b' \in \{0, 1\}$ and wins when $b = b'$.
      - If no adversaries win with probability (meaningfully) more than one half, then *SKE is secure*. 
+     - Basically, $|\mathcal{C}| \geq |\mathcal{M}|$ is essential to guarantee the security of SKE. 
 2. MAC Scheme
    - Definition
      - A MAC $(\text{KGen, Tag}, V_f)$ has $\mathcal{M, T, K}$ such that:
@@ -73,19 +104,22 @@
         - Inverse of the above. 
 
    3. Feistel Network
-
          - Encryption
            - Let $sk_1, ..., sk_r$ of length $n'$ be round keys derived from $sk$. 
-             Let $f_1, ..., f_r$ be *round functions* (Should not be a permutation), defined as $f_i: \{0, 1\}^{n^{'}} \times \{0, 1\}^{l/2} \to \{0, 1\}^{l/2}$, 
+             Let $f_1, ..., f_r$ be *round functions*, defined as $f_i: \{0, 1\}^{n^{'}} \times \{0, 1\}^{l/2} \to \{0, 1\}^{l/2}$, 
+             
              - For the first round: 
                - $f_1: \{0, 1\}^{n^{'}} \times \{0, 1\}^{l/2} \to \{0, 1\}^{l/2}$
                - $m^{(0)} = m = L_0 \parallel R_0$. 
              - For each round $i$ after the first round:
+               
+               > Should always behave as a uniform permutation
+               
                - $L_i = R_{i-1}$, 
                - $R_i =  L_{i-1} ⊕ f_i(sk_i, R_{i-1})$,
                - $m^{(i)} = L_i || R_i$, 
            - The final output is $F_{sk}(m) = m^{(r)}$.
-
+           
          - Decryption
            - Inverse of the above. 
 
@@ -100,14 +134,14 @@
        $\mathcal{M}=\mathcal{C}=\cup_{i \in \mathbb{N}}\{0, 1\}^{il}$
        $\mathcal{K} = \{0, 1\}^n$
      - $\text{KGen}$ samples $sk$ uniformly from $\mathcal{K}$. 
-         - $\text{Enc}(sk, m)$ for $m \in \{0, 1\}^{tl}$
-         
-           - Sample uniform $IV \in \{0, 1\}^l$ and parse $m = m_1, ..., m_t$ in $l$ bit blocks,
-           - $c_0 = IV$
-           - for $i \in \{1, ..., t\}$ let $c_i = F_{sk} (c_{i-1} ⊕ m_i)$ 
+     - $\text{Enc}(sk, m)$ for $m \in \{0, 1\}^{tl}$
+     
+       - Sample uniform $IV \in \{0, 1\}^l$ and parse $m = m_1, ..., m_t$ in $l$ bit blocks,
+       - $c_0 = IV$
+       - for $i \in \{1, ..., t\}$ let $c_i = F_{sk} (c_{i-1} ⊕ m_i)$ 
      - $\text{Dec}(sk, c)$ for $c \in \{0, 1\}^{tl}$
        - Parse $c = c_0 c_1 ... c_t$ as length $l$ blocks,
-         - for $i \in \{1, ..., m\}$ let $m_i = c_{i-1} ⊕ F^{-1}(sk, c_i)$.
+         - for $i \in \{1, ..., m\}$ let $m_i = c_{i-1} ⊕ F^{-1}_{sk}(c_i)$.
 
 3. Counter Mode - Secure, parallel
 
@@ -115,12 +149,12 @@
        $\mathcal{M}=\mathcal{C}=\cup_{i \in \mathbb{N}}\{0, 1\}^{il}$
        $\mathcal{K} = \{0, 1\}^n$
      - $\text{KGen}$ samples $sk$ uniformly from $\mathcal{K}$. 
-         - $\text{Enc}(sk, m)$ for $m \in \{0, 1\}^{tl}$
-           - Sample uniform $IV \in \{0, 1\}^l$ and parse $m = m_1, ..., m_t$ in $l$ bit blocks,
-           - for $i \in \{1, ..., t\}$ let $c_i = F(sk, c_i + i) ⊕ m_i$ 
+     - $\text{Enc}(sk, m)$ for $m \in \{0, 1\}^{tl}$
+       - Sample uniform $IV \in \{0, 1\}^l$ and parse $m = m_1, ..., m_t$ in $l$ bit blocks,
+       - for $i \in \{1, ..., t\}$ let $c_i = F_{sk}(c_i + i) ⊕ m_i$ 
      - $\text{Dec}(sk, c)$ for $c \in \{0, 1\}^{tl}$
        - Parse $c = c_0 c_1 ... c_t$ as length $l$ blocks,
-         - for $i \in \{1, ..., m\}$ let $m_i = c_i ⊕ F^{-1}(sk, c_i + i)$.
+         - for $i \in \{1, ..., m\}$ let $m_i = c_i ⊕ F^{-1}_{sk}(c_i + i)$.
 
 4. MAC-CBC
 
@@ -129,11 +163,15 @@
        $ \mathcal{T} = \{0, 1\}^l$
        $\mathcal{K} = \{0, 1\}^n$
      - $\text{KGen}$ samples $sk$ uniformly from $\mathcal{K}$. 
-         - $\text{Tag}(ik, m)$
-           - Let $\tau_0 = 0^l$, for $i \in \{1, ..., t\}$ let $\tau_i = F_ik (\tau_{i-1} ⊕ m_i)$, return $\tau = \tau_t$.
-     - $V_f(ik, m, \tau)$
+     - $\text{Tag}(ik, m)$:
+       
+       - Let $\tau_0 = 0^l$, for $i \in \{1, ..., t\}$ let $\tau_i = F_{ik} (\tau_{i-1} ⊕ m_i)$, return $\tau = \tau_t$.
+       
+     - $V_f(ik, m, \tau)$:
+     
        - If $m \notin \mathcal{M}$, i.e., $m$ has a length different to $tl$, output 0, else
-         - calculate $\tau' = \text{Tag} (ik, m)$ and return 1 if and only if $\tau' = \tau$.
+       
+       - calculate $\tau' = \text{Tag} (ik, m)$ and return 1 if and only if $\tau' = \tau$.
 
 ---
 
@@ -183,12 +221,25 @@
    - Order
      - Order of a finite group $\mathbb{G}$ is the **number of elements** in $\mathbb{G}$. 
      - Order of an element $g \in \mathbb{G}$, denoted as $\text{ord}(g)$, is the **smallest positive integer** $m$ such that $g^m = 1$. 
+   - Two special groups
+     - Group $(\mathbb{Z}_N, +)$
+       - For $N \in \mathbb{N}$, let $\mathbb{Z}_N := \{0, ..., N-1 \}$
+       - The group$(\mathbb{Z}_N, +)$ is an *abelian group* (under addition modulo $N$) of order $|\mathbb{Z}_N| = N$.
+     - Group $(\mathbb{Z}_N^*, \cdot)$
+       - For $N \in \mathbb{N}$, let $\mathbb{Z}_N^* := \{ a \in \{1, ..., N-1 \} | \gcd(a, N) = 1 \}$
+       - The group $(\mathbb{Z}_N^*, \cdot)$ is an  *abelian group* (under multiplication modulo $N$) of order $|\mathbb{Z}_N^*| = \phi(N)$. 
 
 5. Albelian Group
 
    - Definition
      - Besides the basic definition of a group, an albelian group satisfies:
        $\forall g, h \in \mathbb{G}, g \circ h = h \circ g$
+   - Largrange's Theorem
+     - Given a finite (abelian) group $\mathbb{G}$ and $m = |\mathbb{G}|$. For any element $g \in \mathbb{G}$, we have
+       $$
+       g^m = 1
+       $$
+     
 
 6. Cyclic Group
 
@@ -196,6 +247,8 @@
      - A group $\mathbb{G}$ is **cyclic** if there exists a group element $g \in \mathbb{G}$, such that $G = \{g^k | k \in \mathbb{Z}\}$
        We call $g$ a generator of $\mathbb{G}$ and denote $\mathbb{G} = \langle g \rangle$. 
      - Every cyclic group is an albelian group. 
+   - Property
+     - Assume $g$ is a generator of $\mathbb{G}$, then $\text{ord}(g) = |\mathbb{G}|$. 
 
 ---
 
@@ -330,12 +383,12 @@
    - Security
      - **Correctness**: For an honest prover, the verifier always accepts.
      - **Soundness**: Any cheating prover, who does not know the witness $w$, cannot convince the verifier to accept with probability meaningfully more than zero.
-   
+
 2. Identification Scheme
    - Definition
      - **ID scheme** is an interactive proof, where the prover wants to prove its identity. The relation considered for identification schemes is of the following form:
        - $R(x, w) = 1 \iff w = sk$ is a valid corresponding secret key for the public key $x = pk$.
-   
+
 3. Three-round Identification scheme
      - Definition
        - An ID scheme is a tuple of polynomial-time algorithms $Π = (\text{KGen}, P_1, P_2, V)$, where the latter two are deterministic.
@@ -376,14 +429,14 @@
          I \cdot v \mod N & c = 1\\
          \end{cases}
        $$
-       If the equation holds then the verification is done. 
+         If the equation holds then the verification is done. 
      
    - Correctness
      - Since $z^2 = r^2 \cdot s^{2c} = I \cdot (s^2)^c = I \cdot v^c (\mod N)$, we can get
        $$
        z^2 \cdot v^{-c} = \frac{z^2}{s^{2c}} \implies \frac{r^2\cdot s^{2c}}{s^{2c}} = r^2 = I (\mod N)
        $$
-   
+
    - Security
      - Sqr problem: Given $(N,v)$ it is hard to find its square root modulo $N$ such that $x^2 \mod N = y$. 
      - A malicious prover can convince the verifier with probability 1/2 as follows. The attacker hopes that $c=0$ and sends $I = [z^2 \mod N]$ for $z \leftarrow \mathbb{Z}^*_N$.
@@ -392,42 +445,65 @@
        z^2 \cdot v^{−c} = z^2 \cdot v^{−0} = z^2= I (\mod N)
        $$
        and thus the verifier accepts.
-   
+
      - If computing square roots is hard relative to $\text{GenMod}$ then the Fiat-Shamir ID scheme $Π$ is 1/2-secure.
-   
-   - Fiat-Shamir Transformation
-     - Definition
-       - It is a widely used (in practice) transform <u>from identification schemes to digital signatures</u>. 
-       - Interaction is removed by the prover simply computing $c = H(I)$ where $H: \{0, 1\}^* \to \mathcal{C}_{pk}$ is a hash function. 
-       - 
-     - Correctness
-     - Security
-       - Let $(\text{KGen}_{id}, P_1, P_2, \mathcal{V})$ be a secure (0-secure) identification scheme. Then, the Fiat-Shamir transformed signature scheme from Construction above satisfies **EUF-CMA security**, assuming $H$ is an "ideal random function".
-       - It is obtained by applying the Fiat-Shamir transform on the Schnorr ID scheme.
-   
+
 5. Schnorr ID Scheme
    - Definition
-     - Let $\text{Gen}$ be a group generator algorithm and $(\mathbb{G}, g, q) \leftarrow \text{GenMod}(1^n)$. Then, pick $x \leftarrow \mathbb{Z}_q$ and set $h=g^x$. Then, 
+     - Let $\text{Gen}$ be a group generator algorithm and $(\mathbb{G}, g, q) \leftarrow \text{GenMod}(1^n)$, where $g$ is the generator.
+       1. Pick $x \leftarrow \mathbb{Z}_q$ and set $h=g^x$. Then, 
        $$
-       pk = (\mathbb{G}, g, q, h) \\
-       sk = (\mathbb{G}, g, q, x)
+         pk = (\mathbb{G}, g, q, h) \\
+         sk = (\mathbb{G}, g, q, x)
        $$
+       2. Sample a random number $r \in \mathbb{Z}^*_N$ such that $I = g^r \mod q$. Verifier sample a random challenge $r \in \mathbb{Z}_q$ and send it to the prover. Compute a reponse such that 
+          $$
+          z = r + c \cdot x \mod |\mathbb{G}|
+          $$
      
-       1. 
+       3. The verify function is defined as follows
+          $$
+          g^z \mod q \overset{?}= I \cdot h^c \mod q
+          $$
+          If the equation holds then the verification is done. 
        
+     
    - Correctness
-   
+
      - Since $g^z =g^r \cdot g^{cx} = I \cdot (g^x)^c = I\cdot h^c$, we can get
-     - $g^z \cdot h^{−c} = I$
+     - $g^z \cdot h^{−c} \mod N = I \mod N$
    - Security
      - Security relies on the discrete logarithm assumption (if $\mathbb{G} = ⟨g⟩$ is a cyclic group).
      - A **malicious** prover can convince the verifier with probability $1/q$ as follows. The attacker hopes that $c=0$ and sends $I=g^z$ for $z \leftarrow \mathbb{Z}^q$.
-     - Given a challenge $c$, if $c = 0$ then the attacker outputs $z$ generated earlier. Then
-       $$
+     
+       - Given a challenge $c$, if $c = 0$ then the attacker outputs $z$ generated earlier. Then
+     
+     
+     $$
        g^z \cdot h^{-c} = g^z \cdot h^{-0} = g^z = I
-       $$
+     $$
+     
+       - Suppose $\text{Gen}$ always outputs descriptions $(\mathbb{G},g,q)$ of prime order groups. If the discrete logarithm problem is hard relative to $\text{Gen}$ then the Schnorr ID scheme is $1/q$-secure.
    
-     - Suppose $\text{Gen}$ always outputs descriptions $(\mathbb{G},g,q)$ of prime order groups. If the discrete logarithm problem is hard relative to $\text{Gen}$ then the Schnorr ID scheme is $1/q$-secure.
+6. Fiat-Shamir Transformation
+
+   - Definition
+     - It is a widely used (in practice) transform <u>from identification schemes to digital signatures</u>. 
+     - Interaction is removed by the prover simply computing $c = H(I)$ where $H: \{0, 1\}^* \to \mathcal{C}_{pk}$ is a hash function. 
+     - Let $(\text{KGen}_{id}, P_1, P_2, \mathcal{V})$ be an identification scheme, and construct a signature scheme as follows:
+       - $\text{KGen}$: On input $1^n$, run $(pk, sk) \leftarrow \text{KGen}_{id}$. The public key $pk$ determines the challenge space $\mathcal{C}_{pk}$. A function $H: \{0, 1\}^* \to \mathcal{C}_{pk}$ is specified but we leave this implicit.
+       - $\text{Sign}$: On input a private key $sk$ and a message $m \in \{0, 1\}^*$, do the following:
+         1. $(I, state) \leftarrow P_1(sk)$
+         2. $c = H(I, m)$
+         3. $z = P_2(sk, state, c)$
+            Output the signature $\sigma = (c, z)$
+     
+       - $V_f$: On input a public key $pk$, a message $m$ and a signature $σ = (c, z)$, compute $I := \mathcal{V}(pk,c,z)$ and output 1 if and only if $H(I,m) = c$.
+   - Correctness
+     - 
+   - Security
+     - Let $(\text{KGen}_{id}, P_1, P_2, \mathcal{V})$ be a secure (0-secure) identification scheme. Then, the Fiat-Shamir transformed signature scheme from Construction above satisfies **EUF-CMA security**, assuming $H$ is an "ideal random function".
+     - It is obtained by applying the Fiat-Shamir transform on the Schnorr ID scheme.
 
 ---
 
@@ -435,6 +511,29 @@
 
 1. LWE Scheme
    - Definition
+   
+     - Implicitly assume that $m, q,$ and distribution $\mathcal{X}$ are determined by $n$.
+   
+     - $\text{KGen}(1^n)$: Sample $A \leftarrow \mathbb{Z}_q^{m×n},s \leftarrow \mathbb{Z}_q^n$ and sample $e \leftarrow \mathcal{X}$. If $\parallel e \parallel > q / (8m)$, resample until $\parallel e \parallel \leq q / (8m)$ (to guarantee **shortness**). Set $b := A \cdot s + e$ and output
+       $$
+       pk:= (A, b) \\
+       sk:= s
+       $$
+   
+     - $\text{Enc}(pk, \mu)$: On input of a public key $pk = (A, b)$ and message $\mu \in \{0, 1\}$, sample a random value $r \leftarrow \{0, 1\}^m$ and output ciphertext $c:= (A^T \cdot r, b^T \cdot r + \mu \cdot [q/2])$.
+   
+     - $\text{Dec}(sk, c)$: On input of a secret key $sk = s$ and cipher text $c = (u, v)$, output is
+       $$
+       \mu :=
+       \begin{cases}
+       0 &\text{if } |v - s^Tu| < q/4\\
+       1 &\text{else}
+       \end{cases}
+       $$
+   
    - Correctness
+   
+     - 
+   
    - Security
 

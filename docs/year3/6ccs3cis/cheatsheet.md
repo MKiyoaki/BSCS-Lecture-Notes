@@ -206,16 +206,13 @@
      - $\text{PKE} = (\text{KGen}, \text{Enc}, \text{Dec})$ under $\mathcal{M, C}$ is given as
        - $\text{KGen}(1^n)$: on input $1^n$ outputs a pair of keys $(pk, sk)$, 
        - $\text{Enc}(pk, m)$: on input of a public key $pk$, and a message $m \in \mathcal{M}$, outputs a ciphertext $c \in \mathcal{C}$, 
-       - $\text{Dec}(sk, c)$ (Deterministic algorithm): on input of a secret key $sk$ and a ciphertext $c$ outputs message $m \in \mathcal{M}$. 
-     
+       - $\text{Dec}(sk, c)$ (Deterministic algorithm): on input of a secret key $sk$ and a ciphertext $c$ outputs message $m \in \mathcal{M}$.  
    - Correctness
-   
      - $\forall n \in \mathbb{N}, (pk, sk) \leftarrow \text{KGen} (1^n)$ and $\forall m \in \mathcal{M}$ holds
        $$
        \Pr[\text{Dec}(sk, \text{Enc}(pk, m)) = m] = 1
        $$
        where the probability is taken over the random coins of $\text{KGen}$ and $\text{Enc}$. 
-     
    - Secrutiy 
      - IND-CPA
        - Adversaries, given encryption oracle $\text{Enc}(pk,\cdot)$, cannot distinguish between the ciphertexts of two chosen plaintexts.
@@ -225,7 +222,7 @@
          - $\mathcal{A}$ outputs a guess $b' \in \{0, 1\}$, attempting to determine whether $c^*$ corresponds to $m_0$ or $m_1$. 
        - The encryption scheme is **IND-CPA secure** if for any efficient adversary AA, the probability of correctly guessing bb is at most negligibly better than random guessing. 
    
-1. Textbook RSA Encryption
+2. Textbook RSA Encryption
    - Definition
      - $\text{KGen}(1^n)$:
        - Set two large prime numbers $p, q$, and let $N = p \cdot q$. 
@@ -240,7 +237,7 @@
      - RSA Problem: Given a large product of two large prime numbers $N = p \cdot q$, an index $e$ and ciphertext $c$, find $m$ that satisfies $c \equiv m^e (\mod N)$. 
      - Insecure. Construct 
    
-1. Diffie-Hellman Key-exchange
+3. Diffie-Hellman Key-exchange
    - Definition
      - Assume Alice and Bob. 
      - Generate group parameters $(\mathbb{G}, q, g) \leftarrow \text{Gen}(1^n)$. Then, Alice samples $a \leftarrow \mathbb{Z}_q$ and sends $A := g^a$ to Bob, Bob samples $b \leftarrow \mathbb{Z}_q$ and sends $B := g^b$ to Alice. 
@@ -248,18 +245,18 @@
    - Security
      - Insecure, since there might be *man-in-the-middle attack*.
    
-1. El Gamal Encryption Scheme
+4. El Gamal Encryption Scheme
    - Definition
-     - $\text{KGen}(1^n)$: Set group parameters $(\mathbb{G}, g, q)$, where $g$ is a generator and $q$ is a large prime number, sample a random number $x \leftarrow \mathbb{Z}_q$ and output a public key $pk := (\mathbb{G}, g, q, h = g^x)$ and a secret key $sk := (\mathbb{G}, g, q, x)$.
-     
+     - $\text{KGen}(1^n)$: 
+       - Set group parameters $(\mathbb{G}, g, q)$, where $g$ is a **generator** and $q$ is the **order of group** $\mathbb{G}$, sample a random number $x \leftarrow \mathbb{Z}_q$ 
+       - Output a public key $pk := (\mathbb{G}, g, q, h = g^x)$ and a secret key $sk := (\mathbb{G}, g, q, x)$.
      - $\text{Enc}(pk, m)$: For $m \in \mathbb{G}$, sample a random number $r \leftarrow \mathbb{Z}_q$ and then output the ciphertext
        $$
        (c_1, c_2) := (g^r, h^r \cdot m)
        $$
      
-     - $\text{Dec}((c_1, c_2), sk)$: Output $\widetilde{m} := c_2 / c_2^x$. 
+     - $\text{Dec}((c_1, c_2), sk)$: Output $\widetilde{m} := c_2 / c_1^x$. 
    - Correctness
-   
      - $\widetilde{m} = \frac{c_2}{c_1^x} = \frac{h^r \cdot m}{g^{rx}} = \frac{g^{rx} \cdot m}{g^{rx}} = m$
    - Security
      - Discret Logarithm Problem: Given a generator $g$, a prime number $q$, find a integer $x$ such that $g^x \equiv h (\mod q)$. 
@@ -293,7 +290,6 @@
      - If no adversary wins with probability (meaningfully) more than zero, then the signature scheme is **EUF-CMA secure**.
 
 2. Textbook RSA Signature
-
    - Definition
      - $\text{KGen}(1^n)$: 
        - Set two large prime numbers $p, q$, and let $N = p \cdot q$. 
@@ -308,7 +304,6 @@
      - Adversary can construct a new signature $\sigma = (m_1 \cdot m_2)^d \mod N$ if they know two signatures $\sigma_1 = m_1^d \mod N, \sigma_2 = m_2^d \mod N$ 
    
 3. RSA-FDH Signature
-
    - Motivation
      - Introduce Hash functions to convert messages into fixed length message before signature. 
    - Definition
@@ -317,7 +312,6 @@
      - Similair like Textbook RSA Signature. 
    
 4. Hash Functions
-
    - Definition
      - $H(x)$ is a cryptographic hash function if it is additionally
        - **One-way** (or pre-image resistant). Given $y$, it is hard to compute an x where $H(x) = y$.
@@ -338,17 +332,11 @@
      - **Soundness**: Any cheating prover, who does not know the witness $w$, cannot convince the verifier to accept with probability meaningfully more than zero.
    
 2. Identification Scheme
-
    - Definition
-     - **ID scheme** is an interactive proof, where the prover wants to prove its identity, e.g. to authenticate themselves when logging in to a website. The relation considered for identification schemes is of the following form:
+     - **ID scheme** is an interactive proof, where the prover wants to prove its identity. The relation considered for identification schemes is of the following form:
        - $R(x, w) = 1 \iff w = sk$ is a valid corresponding secret key for the public key $x = pk$.
-     - Textbook RSA PKE relation
-       - Let $x = (N,e)$ be the RSA public key. Then, $R(x,w) = 1$ if and only if $w = (N,d)$ where $e \cdot d = 1 (\mod N)$.
-     - El Gamal PKE relation
-       - Let $x = (\mathbb{G},g,q,h)$ be the El Gamal public key. Then, $R(x,w) = 1$ if and only if $w = (\mathbb{G},g,q,x)$ where $g^x = h$.
-
+   
 3. Three-round Identification scheme
-
      - Definition
        - An ID scheme is a tuple of polynomial-time algorithms $Π = (\text{KGen}, P_1, P_2, V)$, where the latter two are deterministic.
        - Here $C_{pk}$ is the challenge space dependent on the public key $pk$.
@@ -358,54 +346,64 @@
        2. The verifier $\mathcal{V}$ generates a random challenge from the challenge space $c \leftarrow \mathcal{C}_{pk}$, and send $c$ to the prover. 
        3. The prover $P_2$ computes a response by the secret key, state and challenge $r \leftarrow P_2(sk, state, c)$, and sends the result $r$ to the verifier.
        4. The verifier $\mathcal{V}$ uses the public key, the challenge, the response, and the promise to verify $\mathcal{V}(pk, c, r) \overset{?}= I$. If holds, the verifier accpets $I$ as valid. Otherwise rejects it. 
-       
      - Correctness
        - ID scheme $Π = (\text{KGen}, P_1, P_2, \mathcal{V})$ satisfies (perfect) correctness if $\forall n \in \mathbb{N}, (pk, sk) \leftarrow \text{KGen}(1^n), (I, state) \leftarrow P_1(sk)$ and $c \leftarrow \mathcal{C}_{pk}$, it holds that
          $$
          \Pr[\mathcal{V}(pk, c, P_2(sk, state, c)) = I] = 1
          $$
 
-
 4. Fiat-Shamir ID Scheme
    - Definition
-     - Let $(N, p, q) \leftarrow \text{GenMod}(1^n)$. 
-     - Pick $s \leftarrow \mathbb{Z}^∗_N$ and set $v = [s^2 \mod N]$. Then, 
+     - Let $(N, p, q) \leftarrow \text{GenMod}(1^n)$, i.e., $p, q$ are large prime numbers and $N = p \cdot q$. 
+       1. Pick $s \leftarrow \mathbb{Z}^∗_N$ and set $v = [s^2 \mod N]$. Then, 
        $$
-       pk = (N, v) \\
-       sk = (N, s)
+         pk = (N, v) \\
+         sk = (N, s)
        $$
+       2. Sample a random number $r \in \mathbb{Z}^*_N$ such that $I = r^2 \mod N$ and a random challenge value $c \in \{0, 1\}$. A response can be calcuate by 
+       $$
+        z = 
+         \begin{cases}
+         r & c = 0\\
+         r \cdot s & c=1
+         \end{cases}
+       $$
+       3. The verify function is defined as follows
+       $$
+         z^2 \equiv
+         \begin{cases}
+         I \mod N &c = 0\\
+         I \cdot v \mod N & c = 1\\
+         \end{cases}
+       $$
+       If the equation holds then the verification is done. 
      
    - Correctness
-   
      - Since $z^2 = r^2 \cdot s^{2c} = I \cdot (s^2)^c = I \cdot v^c (\mod N)$, we can get
-     - $z^2 \cdot v^{-c} = I (\mod N)$
+       $$
+       z^2 \cdot v^{-c} = \frac{z^2}{s^{2c}} \implies \frac{r^2\cdot s^{2c}}{s^{2c}} = r^2 = I (\mod N)
+       $$
    
    - Security
      - Sqr problem: Given $(N,v)$ it is hard to find its square root modulo $N$ such that $x^2 \mod N = y$. 
-     
      - A malicious prover can convince the verifier with probability 1/2 as follows. The attacker hopes that $c=0$ and sends $I = [z^2 \mod N]$ for $z \leftarrow \mathbb{Z}^*_N$.
-     
      - Given a challenge $c$, if $c=0$ then  the attacker outputs $z$ generated earlier. Then
        $$
        z^2 \cdot v^{−c} = z^2 \cdot v^{−0} = z^2= I (\mod N)
        $$
        and thus the verifier accepts.
-     
-     - If computing square roots is hard relative to $\text{GenMod}$ then the Fiat-Shamir ID scheme $Π$ is 1/2-secure.
-     
-       - The proof sketch *(non-examinable)* consists of <u>two important observations</u>:
-         1. transcripts can be perfectly simulated without knowing the secret key.
-         2. given two transcripts $(I , c_0, z_0), (I , c_1, z_1)$ with the same first message $I$, but two distinct challenges $c_0 \neq c_1$, one can efficiently extract the secret $sk$ (or in other words, compute the square root).
-     
-   - Fiat-Shamir Transformation
    
+     - If computing square roots is hard relative to $\text{GenMod}$ then the Fiat-Shamir ID scheme $Π$ is 1/2-secure.
+   
+   - Fiat-Shamir Transformation
      - Definition
-     
        - It is a widely used (in practice) transform <u>from identification schemes to digital signatures</u>. 
        - Interaction is removed by the prover simply computing $c = H(I)$ where $H: \{0, 1\}^* \to \mathcal{C}_{pk}$ is a hash function. 
        - 
      - Correctness
-       - 
+     - Security
+       - Let $(\text{KGen}_{id}, P_1, P_2, \mathcal{V})$ be a secure (0-secure) identification scheme. Then, the Fiat-Shamir transformed signature scheme from Construction above satisfies **EUF-CMA security**, assuming $H$ is an "ideal random function".
+       - It is obtained by applying the Fiat-Shamir transform on the Schnorr ID scheme.
    
 5. Schnorr ID Scheme
    - Definition
@@ -415,20 +413,20 @@
        sk = (\mathbb{G}, g, q, x)
        $$
      
+       1. 
+       
    - Correctness
    
      - Since $g^z =g^r \cdot g^{cx} = I \cdot (g^x)^c = I\cdot h^c$, we can get
      - $g^z \cdot h^{−c} = I$
-   
    - Security
-   
      - Security relies on the discrete logarithm assumption (if $\mathbb{G} = ⟨g⟩$ is a cyclic group).
      - A **malicious** prover can convince the verifier with probability $1/q$ as follows. The attacker hopes that $c=0$ and sends $I=g^z$ for $z \leftarrow \mathbb{Z}^q$.
      - Given a challenge $c$, if $c = 0$ then the attacker outputs $z$ generated earlier. Then
        $$
        g^z \cdot h^{-c} = g^z \cdot h^{-0} = g^z = I
        $$
-     
+   
      - Suppose $\text{Gen}$ always outputs descriptions $(\mathbb{G},g,q)$ of prime order groups. If the discrete logarithm problem is hard relative to $\text{Gen}$ then the Schnorr ID scheme is $1/q$-secure.
 
 ---
@@ -437,4 +435,6 @@
 
 1. LWE Scheme
    - Definition
+   - Correctness
+   - Security
 

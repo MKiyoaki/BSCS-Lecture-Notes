@@ -132,3 +132,5 @@
 ---
 
 ### 11.3. Cheat Sheet
+
+Check [here](year3/6ccs3cis/cheatsheet.md).

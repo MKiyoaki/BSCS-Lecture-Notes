@@ -113,7 +113,7 @@
                - $m^{(0)} = m = L_0 \parallel R_0$. 
              - For each round $i$ after the first round:
                
-               > Should always behave as a uniform permutation
+               > Should never behave as a uniform permutation
                
                - $L_i = R_{i-1}$, 
                - $R_i =  L_{i-1} ⊕ f_i(sk_i, R_{i-1})$,
@@ -551,6 +551,12 @@
        $$
    
    - Correctness
+   
+     - $v = b^Tr + \mu \cdot [q/2] \implies v-s^Tu = \mu[q/2] + e^Tr \leq \mu[q/2] + q/8$
+   
+     - $\mu = 0$: ...
+   
+     - $\mu = 1$: ...
    
    - Security
 

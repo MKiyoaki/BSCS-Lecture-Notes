@@ -23,8 +23,9 @@
 3. Vegenère Cipher
    - Definition
      - In the framework of SKE the encryption has $\mathcal{M, C, K}$ such that
-       - $\text{KGen}$ returns a $sk$ sampled from $\mathcal{K}$ as $sk = sk_1 sk_2 ... sk_l$
-       - ...
+       - $\text{KGen}$ returns a $sk$ sampled from $\mathcal{K}$ as $sk = sk_1 sk_2 ... sk_n$
+       - $\text{Enc}(sk, m)$: Parse $m = m_1m_2...m_n...m_l$ as individual characters. $c_i=(m_i + sk_i) \mod 26$. Return $c$. 
+       - $\text{Dec}(sk, c)$: Parse $c = c_1c_2...c_n...c_l$ as individual characters. $m_i=(c_i - sk_i) \mod 26$. Return $c$. 
    - Security
      - No. Adversary can use select message attack by sending $m = \texttt{aaaa...aaaa}$ with a length of $l$ such that $\text{Enc}(sk, m) = sk$. 
 4. One-time Pad
@@ -33,7 +34,6 @@
        - $\text{KGen}$ returns a $sk$ sampled from $\mathcal{K}$,
        - $\text{Enc}(sk, m) = sk[l] \oplus m$
        - $\text{Dec}(sk, c) = sk[l] \oplus c$
-   - Correctness
    - Security
      - Secure if the secret key is only used for once. 
 
@@ -135,14 +135,17 @@
        $\mathcal{K} = \{0, 1\}^n$
      - $\text{KGen}$ samples $sk$ uniformly from $\mathcal{K}$. 
      - $\text{Enc}(sk, m)$ for $m \in \{0, 1\}^{tl}$
-     
+
        - Sample uniform $IV \in \{0, 1\}^l$ and parse $m = m_1, ..., m_t$ in $l$ bit blocks,
        - $c_0 = IV$
        - for $i \in \{1, ..., t\}$ let $c_i = F_{sk} (c_{i-1} ⊕ m_i)$ 
      - $\text{Dec}(sk, c)$ for $c \in \{0, 1\}^{tl}$
        - Parse $c = c_0 c_1 ... c_t$ as length $l$ blocks,
          - for $i \in \{1, ..., m\}$ let $m_i = c_{i-1} ⊕ F^{-1}_{sk}(c_i)$.
-
+     - Insecure:
+       - Assume $x = \{0, 1\}^l / \{0\}^l$, construct $m' = (m_1 \oplus x)m_2m_3....m_t$.
+       - Constrcut $c_0' = c_0 \oplus x \implies c = c_0'c_1...c_t$
+       - $c_1' = F_{sk}(m_1' \oplus c_0') = F_{sk}((m_1 \oplus x) \oplus (c_0 \oplus x)) = F_{sk}(m_1 \oplus c_0) = c_1$
 3. Counter Mode - Secure, parallel
 
      - $F: \{0, 1\}^n \times \{0, 1\}^l$ is a block cipher, 
@@ -150,12 +153,11 @@
        $\mathcal{K} = \{0, 1\}^n$
      - $\text{KGen}$ samples $sk$ uniformly from $\mathcal{K}$. 
      - $\text{Enc}(sk, m)$ for $m \in \{0, 1\}^{tl}$
-       - Sample uniform $IV \in \{0, 1\}^l$ and parse $m = m_1, ..., m_t$ in $l$ bit blocks,
-       - for $i \in \{1, ..., t\}$ let $c_i = F_{sk}(c_i + i) ⊕ m_i$ 
+       - Sample uniform $c_0 = IV \in \{0, 1\}^l$ and parse $m = m_1, ..., m_t$ in $l$ bit blocks,
+       - for $i \in \{1, ..., t\}$ let $c_i = F_{sk}(c_i + i) ⊕ m_i$ , return $c$. 
      - $\text{Dec}(sk, c)$ for $c \in \{0, 1\}^{tl}$
        - Parse $c = c_0 c_1 ... c_t$ as length $l$ blocks,
          - for $i \in \{1, ..., m\}$ let $m_i = c_i ⊕ F^{-1}_{sk}(c_i + i)$.
-
 4. MAC-CBC
 
      - $F: \{0, 1\}^n \times \{0, 1\}^l$ is a block cipher, 
@@ -165,13 +167,17 @@
      - $\text{KGen}$ samples $sk$ uniformly from $\mathcal{K}$. 
      - $\text{Tag}(ik, m)$:
        
-       - Let $\tau_0 = 0^l$, for $i \in \{1, ..., t\}$ let $\tau_i = F_{ik} (\tau_{i-1} ⊕ m_i)$, return $\tau = \tau_t$.
+       - Let $\tau_0 = 0^l$, for $i \in \{1, ..., t\}$ let $\tau_i = F_{ik} (\tau_{i-1} ⊕ m_i)$, return $\tau = \tau_0\tau_t$.
        
      - $V_f(ik, m, \tau)$:
      
        - If $m \notin \mathcal{M}$, i.e., $m$ has a length different to $tl$, output 0, else
        
        - calculate $\tau' = \text{Tag} (ik, m)$ and return 1 if and only if $\tau' = \tau$.
+     - Inscure: 
+       - Assume $x = \{0, 1\}^l / \{0\}^l$, construct $m' = (m_1 \oplus x)m_2m_3....m_t$.
+       - Constrcut $\tau_0' = \tau_0 \oplus x \implies \tau = \tau_0'\tau_1...\tau_t$
+       - $\tau_1' = F_{ik}(m_1' \oplus \tau0') = F_{ik}((m_1 \oplus x) \oplus (\tau_0 \oplus x)) = F_{ik}(m_1 \oplus \tau_0) = \tau_1$
 
 ---
 
@@ -234,12 +240,12 @@
    - Definition
      - Besides the basic definition of a group, an albelian group satisfies:
        $\forall g, h \in \mathbb{G}, g \circ h = h \circ g$
+
    - Largrange's Theorem
      - Given a finite (abelian) group $\mathbb{G}$ and $m = |\mathbb{G}|$. For any element $g \in \mathbb{G}$, we have
        $$
        g^m = 1
        $$
-     
 
 6. Cyclic Group
 
@@ -249,6 +255,7 @@
      - Every cyclic group is an albelian group. 
    - Property
      - Assume $g$ is a generator of $\mathbb{G}$, then $\text{ord}(g) = |\mathbb{G}|$. 
+     - Assume a group $\mathbb{G}$, if $|\mathbb{G}|$ is prime, then every element in the group is a group generator. 
 
 ---
 
@@ -273,7 +280,7 @@
          - $\mathcal{A}$ submit two plaintexts $m_0, m_1 \in \mathcal{M}$ with equal length.
          - Challenger selects a random bit $b \in \{0, 1\}$, and computes the challenge ciphertext $c^* = \text{Enc}(pk, m_b)$. 
          - $\mathcal{A}$ outputs a guess $b' \in \{0, 1\}$, attempting to determine whether $c^*$ corresponds to $m_0$ or $m_1$. 
-       - The encryption scheme is **IND-CPA secure** if for any efficient adversary AA, the probability of correctly guessing bb is at most negligibly better than random guessing. 
+       - The encryption scheme is **IND-CPA secure** if for any efficient adversary $\mathcal{A}$, the probability of correctly guessing bb is at most negligibly better than random guessing. 
    
 2. Textbook RSA Encryption
    - Definition
@@ -284,11 +291,12 @@
      - $\text{Enc}(pk, m)$: Takes as input the public key, $pk= (N, e)$, and a message $m \in \mathbb{Z}^*_N$ and outputs $c := [m^e \mod N]$. 
      - $\text{Dec}(sk, c)$: Takes as input the secret key, $sk = (N, d)$, and a ciphertext $c \in \mathbb{Z}^*_N$, and it outputs $[c^d \mod N]$.
    - Correctness
-     - $m = \text{Dec}(sk, \text{Enc}(pk, m)) = m^{ed} \mod N = m^{k\phi(N)+1} \mod M$, or
-     - $m = 0$
+     - $\gcd(m, N) =1$: $m = \text{Dec}(sk, \text{Enc}(pk, m)) = m^{ed} \mod N = m^{k\phi(N)+1} \mod M$, or
+     - $\gcd(m, N) = p \text{ or }q$: $p|m \implies m = k \cdot p \implies m^{ed} - m = k(m^{ed-1} - 1)$ and same holds for $q$. Since $N = pq$ thus the correctness holds. 
+     - $m = 0$: Travail. 
    - Security
      - RSA Problem: Given a large product of two large prime numbers $N = p \cdot q$, an index $e$ and ciphertext $c$, find $m$ that satisfies $c \equiv m^e (\mod N)$. 
-     - Insecure. Construct 
+     - Insecure. Assume $m^* = m_1 \cdot m_2$, access $\text{Enc}(pk, \cdot)$ to generate two ciphertext $c_1, c_2$. $\text{Enc}(pk, m^*) = (m_1m_2)^e = c_1c_2$. 
    
 3. Diffie-Hellman Key-exchange
    - Definition
@@ -362,7 +370,18 @@
    - Definition
      - Similair like Textbook RSA Signature, but replace all the $m$ as $H(m)$. 
    - Correctness
-     - Similair like Textbook RSA Signature. 
+     - Similair like Textbook RSA Signature.
+     
+     - $V_f(pk ,m, \sigma = \text{Sign}(sk, m))$ checkes whether
+       $$
+       \begin{array}{lll}
+       [\sigma^e \mod N] &= &[[H(m)^d \mod N]^e \mod N]\\
+       ~ &= &[H(m)^{ed} \mod N] \\
+       ~ &= &[H(m)^{k \phi(N) + 1} \mod N] \\
+       ~ &= &[H(m) \mod N] \\
+       ~ &= &H(m)
+       \end{array}
+       $$
    
 4. Hash Functions
    - Definition
@@ -500,7 +519,7 @@
      
        - $V_f$: On input a public key $pk$, a message $m$ and a signature $σ = (c, z)$, compute $I := \mathcal{V}(pk,c,z)$ and output 1 if and only if $H(I,m) = c$.
    - Correctness
-     - 
+     - Let $(\text{KGen}_{id}, P_1, P_2, \mathcal{V})$ be a correct identification scheme. Then, the Fiat-Shamir transformed signature scheme from Construction above satisfies correctness.
    - Security
      - Let $(\text{KGen}_{id}, P_1, P_2, \mathcal{V})$ be a secure (0-secure) identification scheme. Then, the Fiat-Shamir transformed signature scheme from Construction above satisfies **EUF-CMA security**, assuming $H$ is an "ideal random function".
      - It is obtained by applying the Fiat-Shamir transform on the Schnorr ID scheme.
@@ -532,8 +551,6 @@
        $$
    
    - Correctness
-   
-     - 
    
    - Security
 

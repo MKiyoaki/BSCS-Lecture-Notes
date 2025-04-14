@@ -53,3 +53,7 @@
 - [6CCS3CIS* - Crytography](year3/6ccs3cis.md)
 
 #### Term 2
+
+- [7CCSMPNN - Pattern Recognition](year3/7ccsmpnn)
+- [6CCS3ML1 - Machine Learning](year3/6ccs3ml1)
+- [6CCS3COM - Machine Learning](year3/6ccs3com)

@@ -154,7 +154,7 @@
      - $\text{KGen}$ samples $sk$ uniformly from $\mathcal{K}$. 
      - $\text{Enc}(sk, m)$ for $m \in \{0, 1\}^{tl}$
        - Sample uniform $c_0 = IV \in \{0, 1\}^l$ and parse $m = m_1, ..., m_t$ in $l$ bit blocks,
-       - for $i \in \{1, ..., t\}$ let $c_i = F_{sk}(c_i + i) ⊕ m_i$ , return $c$. 
+       - for $i \in \{1, ..., t\}$ let $c_i = F_{sk}(IV + i) ⊕ m_i$ , return $c$. 
      - $\text{Dec}(sk, c)$ for $c \in \{0, 1\}^{tl}$
        - Parse $c = c_0 c_1 ... c_t$ as length $l$ blocks,
          - for $i \in \{1, ..., m\}$ let $m_i = c_i ⊕ F^{-1}_{sk}(c_i + i)$.

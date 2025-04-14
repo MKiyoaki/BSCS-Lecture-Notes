@@ -8,11 +8,11 @@
 
 ### Quick Start
 
-[WEEK1 - Introduction](year3/6ccs3com/w1.md)
+[WEEK1 - Introduction to Computability](year3/6ccs3com/w1.md)
 
-[WEEK2 - Formal Cryptographic Scheme](year3/6ccs3com/w2.md)
+[WEEK2 - Automata](year3/6ccs3com/w2.md)
 
-[WEEK3 - Transposition and Subsitution Ciphers](year3/6ccs3com/w3.md)
+[WEEK3 - Turing Machine](year3/6ccs3com/w3.md)
 
 [WEEK4 - Block Cipher](year3/6ccs3com/w4.md)
 

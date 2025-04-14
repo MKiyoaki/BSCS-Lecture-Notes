@@ -12,9 +12,9 @@
 
 [WEEK3 - Transposition and Subsitution Ciphers](year3/6ccs3cis/w3.md)
 
-[WEEK4 - Block Cipher](year3/6ccs3cis/w4.md)
+[WEEK4 - Application of Automata](year3/6ccs3cis/w4.md)
 
-[WEEK5 - Mode of Operation](year3/6ccs3cis/w5.md)
+[WEEK5 - Revision I](year3/6ccs3cis/w5.md)
 
 READING WEEK
 

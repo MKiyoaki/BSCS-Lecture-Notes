@@ -56,4 +56,4 @@
 
 - [7CCSMPNN - Pattern Recognition](year3/7ccsmpnn)
 - [6CCS3ML1 - Machine Learning](year3/6ccs3ml1)
-- [6CCS3COM - Machine Learning](year3/6ccs3com)
+- [6CCS3COM - Computational Models](year3/6ccs3com)

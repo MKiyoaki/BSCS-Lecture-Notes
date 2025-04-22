@@ -58,8 +58,30 @@
 
 
 
-
 ##### 11.1.4. Kernel Machine
+
+
+
+##### 11.1.5. Neural Network
+
+- Perceptron
+  - Approximate to linear functions. 
+  - `Input` =`weight`=> `output`
+- Multilayer Perceptron
+  - Approximate to any functions (Universal Approximator). 
+  - `Input` =`weight`=> `hidden` =`weight`=> `output`
+
+
+
+##### 11.1.6. Reinforcement Learning
+
+- Model-based: Algorithms that require transition model.
+  - Adaptive Dynamic Programming (ADP)
+- Model-free: Algoriths that NOT require transition model.
+  - Direct utility estimation
+  - Temporal Difference Learning (TD)
+- Function approximation
+  - Example: Deep Reinforcement Learning
 
 
 
@@ -120,7 +142,8 @@
   
 - Gini Impurity
   $$
-  
+  G(S) = 1 - \sum^c_{i=1} p_i^2 \\
+  \text{GiniImpurity}(S, A) = \sum_i \frac{|S_i|}{|S|} G(S_i)
   $$
 
 
@@ -138,6 +161,7 @@
   = \frac{2}{\parallel \textbf{w} \parallel}
   \end{array}
   $$
+  where $\parallel \cdot \parallel$ denotes euclidean distance. 
   
 - Linear SVM
 
@@ -176,6 +200,11 @@
 
 ##### 11.2.5. Neural Networks
 
+- Perceptron
+  - 
+- Multilayer Perceptron (MLP)
+  - 
+
 ##### 11.2.6. Reinforcement Learning
 
 - Action-value Methods
@@ -211,6 +240,7 @@
     $$
 - Adaptive Dynamic Programming (ADP)
   
+  - Model-based
   - Bellman Equation
     $$
     U^\pi(s) = R(s) + \gamma \sum_{s'} P(s'|s, \pi(s)) U^\pi(s')
@@ -219,13 +249,15 @@
   - Policy Iteration
 - Temporal Difference Learning (TD)
 
+  - Model-free
+
   - TD Update Rule
     $$
     U^\pi(s) \leftarrow U^\pi(s) + \alpha \left( \underbrace{R(s) + \gamma U^\pi(s')}_\text{actual utiltiy} - \underbrace{U^\pi(s) }_\text{esitmate utiltiy}\right)
     $$
-  
+
 - Q-Learning
-  
+
   - Off-policy
     
   - Q-Learning Update Rule
@@ -233,7 +265,7 @@
     Q(s, a) \leftarrow Q(s,a) + \alpha \left( R(s) + \gamma \max_{a'} Q(s', a') - Q(s, a) \right)
     $$
     
-  
+
 - SARSA
 
   - On-policy
@@ -241,4 +273,3 @@
     $$
     Q(s, a) \leftarrow Q(s, a) + \alpha \left( R(s) + \gamma Q(s', a') - Q(s, a) \right)
     $$
-    

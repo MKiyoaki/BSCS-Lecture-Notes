@@ -32,7 +32,7 @@ READING WEEK
 
 [WEEK8 - Support Vector Machines](year3/7ccsmppn/w8.md)
 
-[WEEK9 - Ensemble Methods](year3/7ccsmppn/w9.md)
+[WEEK9 - Ensemble Methods](year3/7ccsmpnn/w9.md)
 
 [WEEK10 - Clustering](year3/7ccsmppn/w10.md)
 

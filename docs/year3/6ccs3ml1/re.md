@@ -47,8 +47,14 @@
   - Probability Transition Matrix
     $$
     A =
+    \begin{bmatrix}
+    - & a_{01} & a_{02} & ... & a_{0N} & - \\
+    
+    
+    \end{bmatrix}
     $$
-  
+    where $a_{ij} = P(X_t = x_j|X_{t-1} = x_i)$, and $\forall i \sum_{j=1}^{N+1}a_{ij} = 1$
+    
   - Emission Matrix
   
 - First order HMM assupmtions
@@ -56,13 +62,7 @@
   - Markov Assuption: 
   - Output Independence
 
-
-
-##### 11.1.4. Kernel Machine
-
-
-
-##### 11.1.5. Neural Network
+##### 11.1.4. Neural Network
 
 - Perceptron
   - Approximate to linear functions. 
@@ -71,9 +71,7 @@
   - Approximate to any functions (Universal Approximator). 
   - `Input` =`weight`=> `hidden` =`weight`=> `output`
 
-
-
-##### 11.1.6. Reinforcement Learning
+##### 11.1.5. Reinforcement Learning
 
 - Model-based: Algorithms that require transition model.
   - Adaptive Dynamic Programming (ADP)
@@ -83,7 +81,31 @@
 - Function approximation
   - Example: Deep Reinforcement Learning
 
+##### 11.1.6. Evolutionary Algorithm
 
+- Evolutionary Algorithm
+  - Steps:
+    1. Initialize population with random values.
+    2. Perform tasks to calculate the fitness of population.
+    3. Select the most fitness populations as the next generation.
+    4. Reproduce new population. 
+    5. Repeat with 2. 3. 4. steps. 
+- Genetic Algorithm
+  - Use binary bit string as representations.
+    - Through encoding methods. 
+    - Invalid, multiple, uncertain: populations that not satisfy the constrains of the problem. 
+  - Crossover
+    - Use a mask to control.
+    - Swap the bit with mask of zero places.
+  - Mutation
+    - Rate of mutation: rate of populations to execute mutation.
+    - n-point mutation: randomly select $n$ bits to filp the value. 
+- Genetic Programming
+  - Use trees as representations.
+  - Crossover
+    - Swap a part of the sub-trees or branches.
+  - Mutation
+    - Randomly change the value of some nodes. 
 
 ### 11.2. Formulas
 
@@ -146,12 +168,7 @@
   \text{GiniImpurity}(S, A) = \sum_i \frac{|S_i|}{|S|} G(S_i)
   $$
 
-
-##### 11.2.3. 
-
-
-
-##### 11.2.4. Kernel Machine
+##### 11.2.3. Kernel Machine
 
 - Maximum Margin
   $$
@@ -196,16 +213,42 @@
 
 - Nonlinear SVM
 
-  - 
+  - Kernel Tricks
+    
+    - Define a kernel function $K(\cdot)$ to replace the dimensional promotion funciton. Reduce the computation complexity. 
+    
+    $$
+    \arg\max_\alpha \sum_i \alpha_i - \frac{1}{2} \sum_{i, j}\alpha_i\alpha_jy_iy_j F(\textbf{x}_i) \cdot F(\textbf{x}_j)
+    $$
+    
+    $$
+    \arg\max_\alpha \sum_i \alpha_i - \frac{1}{2} \sum_{i, j}\alpha_i\alpha_jy_iy_j K(\textbf{x}_i \cdot \textbf{x}_j)
+    $$
+    
 
-##### 11.2.5. Neural Networks
+##### 11.2.4. Neural Networks
 
 - Perceptron
-  - 
+  - Error Correction Rule
+    $$
+    w_i \leftarrow w_i + \Delta w_i \\
+    \Delta w_i = \alpha (t - g(s))x_i
+    $$
+  
+  - Delta Learning Rule
+    $$
+    w_i \leftarrow w_i + \Delta w_i \\
+    \Delta w_i = \alpha (t - s)x_i
+    $$
+  
+  - Backpropagation Rule (Generalized Delta Learning Rule)
+    $$
+    w_i \leftarrow w_i + \Delta w_i \\
+    \Delta w_i = \alpha (t - g(s))g'(s)x_i
+    $$
 - Multilayer Perceptron (MLP)
-  - 
 
-##### 11.2.6. Reinforcement Learning
+##### 11.2.5. Reinforcement Learning
 
 - Action-value Methods
   - Action-value Estimation

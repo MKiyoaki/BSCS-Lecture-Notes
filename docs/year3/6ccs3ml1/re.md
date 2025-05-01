@@ -30,7 +30,7 @@
 
   - Measurement Metrices
 
-    - Confusion Matrix	
+    - Confusion Matrix
 
       | Predicted / Actual | **T**          | **F**          |
       | ------------------ | -------------- | -------------- |
@@ -150,14 +150,14 @@
       B =
       \begin{bmatrix}
       b_0(k_0) & - & - & ... & - & - \\
-      - & b_1(k_{11}) & b_2(k_{21}) & ... & b_N(k_{N1}) & - \\
-      - & b_1(k_{12}) & b_2(k_{22}) & ... & b_N(k_{N2}) & - \\
+      - & b_1(k_{1}) & b_2(k_{1}) & ... & b_N(k_{1}) & - \\
+      - & b_1(k_{2}) & b_2(k_{2}) & ... & b_N(k_{2}) & - \\
       - & ... & ... & ... & ... & - \\
-      - & b_1(k_{1M}) & b_2(k_{2M}) & ... & b_N(k_{NM}) & - \\
+      - & b_1(k_{M}) & b_2(k_{M}) & ... & b_N(k_{M}) & - \\
       - & - & - & ... & - & b_E(k_f) \\
       \end{bmatrix}
       $$
-      where $b_{ij} = P(X_t = x_i | O_t = k_{ij})$. 
+      where $b_{i}(k_j) = P(O_t = k_{j}| X_t = x_i)$. 
 
   - First order HMM assupmtions
 
@@ -183,6 +183,12 @@
 
   - Linear SVM
 
+    - Objective function:
+      $$
+      \min_\textbf{w} J(\textbf{w}) = \frac{1}{2} \parallel \textbf{w} \parallel^2
+      $$
+        subject to $y_i(\textbf{w}^T \textbf{x}_i + w_0) \geq 1, i \in \{1, 2, ..., N\}$
+  
     - The linear SVM classifier (linearly separable case) can be found by solving the solution $(\textbf{w}, w_0, λ_i)$ to the following conditions:
       $$
       \begin{array}{lcl}
@@ -197,7 +203,7 @@
       \lambda_i \geq 0 \\
       \lambda_i(y_i(\textbf{w}^T\textbf{w}_i + w_0) -1) = 0, i \in \{1, 2, ..., N \}
       $$
-
+  
       - Support Vector: sample $i$ where $\lambda_i > 0$
 
     - Hard classifier
@@ -213,11 +219,11 @@
       where $h(z) = \begin{cases} -1 &\text{if } z<-1 \\ z &\text{if } -1 \leq z \leq1\\ +1 &\text{if } z > 1\end{cases}$
 
   - Nonlinear SVM
-
+  
     - Kernel Tricks
 
       - Define a kernel function $K(\cdot)$ to replace the dimensional promotion funciton. Reduce the computation complexity. 
-
+  
       $$
       \arg\max_\alpha \sum_i \alpha_i - \frac{1}{2} \sum_{i, j}\alpha_i\alpha_jy_iy_j F(\textbf{x}_i) \cdot F(\textbf{x}_j)
       $$
@@ -225,10 +231,23 @@
       $$
       \arg\max_\alpha \sum_i \alpha_i - \frac{1}{2} \sum_{i, j}\alpha_i\alpha_jy_iy_j K(\textbf{x}_i \cdot \textbf{x}_j)
       $$
-
+  
   - Soft-margin SVM
-
-    - 
+  
+    - The linear SVM classifier (non-separable case) can be found by solving the solution $(\textbf{w}, w_0, ξ_i, λ_i, μ_i)$ to the following conditions:
+      $$
+      \begin{array}{lcl}
+      \frac{\partial \mathcal{L}(\textbf{w}, w_0, \xi, \lambda, \mu)}{\partial \textbf{w}} = \textbf{0} &\implies & \textbf{w} = \sum^N_{i=1} \lambda_i y_i \textbf{x}_i\\
+      \frac{\partial \mathcal{L}(\textbf{w}, w_0, \xi, \lambda, \mu)}{\partial w_0} = 0 &\implies &\sum^N_{i=1} \lambda_i y_i = 0 \\
+      \frac{\partial \mathcal{L}(\textbf{w}, w_0, \xi, \lambda, \mu)}{\partial \xi_i} = 0 &\implies & C - \mu_i - \lambda_i = 0
+      \end{array}
+      $$
+      where
+      $$
+      \mu_i, \lambda_i \geq 0, \\
+      \mu_i\xi_i = 0, \\
+      \lambda_i(y_i(\textbf{w}^T\textbf{x}_i + w_0) - 1 + \xi_i) = 0, i \in \{1, 2, ..., N\}
+      $$
 
 
 ##### 7. Neural Network
@@ -253,35 +272,35 @@
 
   - Perceptron
 
-    - Error Correction Rule
+    - Error Correction Rule (Only for negative samples)
       $$
       w_i \leftarrow w_i + \Delta w_i \\
-      \Delta w_i = \alpha (t - g(s))x_i
+      \Delta w_i = \alpha (t - g(s))x_i \\
+      g(\cdot) = \text{step}(\cdot)
       $$
-
+      
     - Delta Learning Rule
       $$
       w_i \leftarrow w_i + \Delta w_i \\
       \Delta w_i = \alpha (t - s)x_i
       $$
-
+  
     - Backpropagation Rule (Generalized Delta Learning Rule)
       $$
       w_i \leftarrow w_i + \Delta w_i \\
-      \Delta w_i = \alpha (t - g(s))g'(s)x_i
+      \Delta w_i = \alpha (t - f(s))f'(s)x_i
       $$
-
+  
   - Multilayer Perceptron (MLP)
-
-    - 
+  
 
 ##### 8. Reinforcement Learning
 
 - Definition
   
-  - Model-based: Algorithms that require transition model.
+  - **Model-based**: Algorithms that require transition model.
     - Adaptive Dynamic Programming (ADP)
-  - Model-free: Algoriths that NOT require transition model.
+  - **Model-free**: Algoriths that NOT require transition model.
     - Direct utility estimation
     - Temporal Difference Learning (TD)
   - Function approximation

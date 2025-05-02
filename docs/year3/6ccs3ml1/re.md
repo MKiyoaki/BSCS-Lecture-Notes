@@ -110,21 +110,24 @@
 - Definiton
   - Gradient Descent
   - Gradient
+  
 - Formula
+  
+  - Assume 
+  
   - Gradient Descent Update Rule
   
     - Stochastic
       $$
-      \textbf{w}_i \gets \textbf{w}_i + \alpha \frac{\partial J}{\partial \textbf{w}_i}
+      w_i \leftarrow w_i - \alpha \frac{\partial}{\partial w_i} J(w_i)
       $$
   
     - Batch
       $$
-      \textbf{w}_i \gets \textbf{w}_i + \alpha \frac{1}{N}\sum_{n=1}^N \frac{\partial J}{\partial \textbf{w}_i}
+      \textbf{w}_i \gets \textbf{w}_i - \alpha \sum_{n=1}^N \frac{\partial J}{\partial \textbf{w}_i}
       $$
       
   
-  - 
 
 ##### 5. Hidden Markov Model (HMM)
 
